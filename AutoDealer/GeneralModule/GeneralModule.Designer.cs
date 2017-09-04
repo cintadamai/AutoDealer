@@ -33,11 +33,11 @@
             this.InputUser = new DevExpress.XtraBars.BarButtonItem();
             this.UserRoles = new DevExpress.XtraBars.BarButtonItem();
             this.UserBranch = new DevExpress.XtraBars.BarButtonItem();
+            this.ClockBarStaticItem = new DevExpress.XtraBars.BarStaticItem();
             this.UserRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.UserRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.GeneralModuleXtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.GeneralModuleRibbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.ClockBarStaticItem = new DevExpress.XtraBars.BarStaticItem();
+            this.GeneralModuleXtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.GeneralModuleRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeneralModuleXtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,7 @@
             this.InputUser.Name = "InputUser";
             this.InputUser.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.InputUser.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.InputUser_ItemClick);
             // 
             // UserRoles
             // 
@@ -89,6 +90,13 @@
             this.UserBranch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
+            // ClockBarStaticItem
+            // 
+            this.ClockBarStaticItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.ClockBarStaticItem.Caption = "Jam";
+            this.ClockBarStaticItem.Id = 5;
+            this.ClockBarStaticItem.Name = "ClockBarStaticItem";
+            // 
             // UserRibbonPage
             // 
             this.UserRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -105,10 +113,6 @@
             this.UserRibbonPageGroup.Name = "UserRibbonPageGroup";
             this.UserRibbonPageGroup.Text = "User";
             // 
-            // GeneralModuleXtraTabbedMdiManager
-            // 
-            this.GeneralModuleXtraTabbedMdiManager.MdiParent = this;
-            // 
             // GeneralModuleRibbonStatusBar
             // 
             this.GeneralModuleRibbonStatusBar.ItemLinks.Add(this.ClockBarStaticItem);
@@ -117,12 +121,9 @@
             this.GeneralModuleRibbonStatusBar.Ribbon = this.GeneralModuleRibbonControl;
             this.GeneralModuleRibbonStatusBar.Size = new System.Drawing.Size(833, 27);
             // 
-            // ClockBarStaticItem
+            // GeneralModuleXtraTabbedMdiManager
             // 
-            this.ClockBarStaticItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.ClockBarStaticItem.Caption = "Jam";
-            this.ClockBarStaticItem.Id = 5;
-            this.ClockBarStaticItem.Name = "ClockBarStaticItem";
+            this.GeneralModuleXtraTabbedMdiManager.MdiParent = this;
             // 
             // GeneralModule
             // 

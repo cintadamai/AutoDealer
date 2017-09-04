@@ -32,6 +32,19 @@ namespace AutoDealer.DB.DMS
             get { return fpassword; }
             set { SetPropertyValue<string>("password", ref fpassword, value); }
         }
+        bool factive;
+        public bool active
+        {
+            get { return factive; }
+            set { SetPropertyValue<bool>("active", ref factive, value); }
+        }
+        string fcurrent_branch;
+        [Size(255)]
+        public string current_branch
+        {
+            get { return fcurrent_branch; }
+            set { SetPropertyValue<string>("current_branch", ref fcurrent_branch, value); }
+        }
         string fcreated_by;
         [Size(255)]
         public string created_by
@@ -39,11 +52,18 @@ namespace AutoDealer.DB.DMS
             get { return fcreated_by; }
             set { SetPropertyValue<string>("created_by", ref fcreated_by, value); }
         }
-        bool factive;
-        public bool active
+        DateTime fcreated_at;
+        public DateTime created_at
         {
-            get { return factive; }
-            set { SetPropertyValue<bool>("active", ref factive, value); }
+            get { return fcreated_at; }
+            set { SetPropertyValue<DateTime>("created_at", ref fcreated_at, value); }
+        }
+        string fperson_name;
+        [Size(255)]
+        public string person_name
+        {
+            get { return fperson_name; }
+            set { SetPropertyValue<string>("person_name", ref fperson_name, value); }
         }
     }
 

@@ -21,6 +21,7 @@ namespace AutoDealer.GeneralModule
         {
             InitializeComponent();
             userAkses = new UserAkses();
+            GeneralModuleXtraTabbedMdiManager.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageAndTabControlHeader;
         }
 
         private void GeneralModule_Load(object sender, EventArgs e)
@@ -37,6 +38,16 @@ namespace AutoDealer.GeneralModule
             if (userAkses.Can("InputUser")) InputUser.Enabled = true; else InputUser.Enabled = false;
             if (userAkses.Can("UserRoles")) UserRoles.Enabled = true; else UserRoles.Enabled = false;
             if (userAkses.Can("UserBranch")) UserBranch.Enabled = true; else UserBranch.Enabled = false;
+        }
+
+        private void InputUser_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            User.InputUser f = new User.InputUser
+            {
+                MdiParent = this
+            };
+            f.Show();
+            f.Focus();
         }
     }
 }

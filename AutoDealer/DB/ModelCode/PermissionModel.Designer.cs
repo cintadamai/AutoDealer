@@ -25,13 +25,6 @@ namespace AutoDealer.DB.DMS
             get { return fpermission_name; }
             set { SetPropertyValue<string>("permission_name", ref fpermission_name, value); }
         }
-        string fcreated_by;
-        [Size(255)]
-        public string created_by
-        {
-            get { return fcreated_by; }
-            set { SetPropertyValue<string>("created_by", ref fcreated_by, value); }
-        }
         long fpermission_type;
         public long permission_type
         {
@@ -51,6 +44,19 @@ namespace AutoDealer.DB.DMS
         {
             get { return fparent_permission; }
             set { SetPropertyValue<string>("parent_permission", ref fparent_permission, value); }
+        }
+        DateTime fcreated_at;
+        public DateTime created_at
+        {
+            get { return fcreated_at; }
+            set { SetPropertyValue<DateTime>("created_at", ref fcreated_at, value); }
+        }
+        string fcreated_by;
+        [Size(255)]
+        public string created_by
+        {
+            get { return fcreated_by; }
+            set { SetPropertyValue<string>("created_by", ref fcreated_by, value); }
         }
     }
 

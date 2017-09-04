@@ -25,6 +25,12 @@ namespace AutoDealer.DB.DMS
             get { return frolename; }
             set { SetPropertyValue<string>("rolename", ref frolename, value); }
         }
+        DateTime fcreated_at;
+        public DateTime created_at
+        {
+            get { return fcreated_at; }
+            set { SetPropertyValue<DateTime>("created_at", ref fcreated_at, value); }
+        }
         string fcreated_by;
         [Size(255)]
         public string created_by
