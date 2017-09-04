@@ -30,11 +30,11 @@ namespace AutoDealer.Additional.Permission
              **/
             var UserRoles = user_roles_coll.Where(ur => ur.username == User.username);
 
-            if (!UserRoles.Any())
-            {
-                MessageBox.Show("User belum memiliki roles, silahkan hubungi sistem administrator terlebih dahulu", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+            //if (!UserRoles.Any())
+            //{
+              //  MessageBox.Show("User belum memiliki roles, silahkan hubungi sistem administrator terlebih dahulu", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              //  return false;
+            //}
 
             foreach (UserHasRolesModel UserRole in UserRoles)
             {

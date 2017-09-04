@@ -118,5 +118,12 @@ namespace AutoDealer
                 Tax.Enabled = true;
             }
         }
+
+        private void GeneralModule_Click(object sender, EventArgs e)
+        {
+            AutoDealer.GeneralModule.GeneralModule f = new AutoDealer.GeneralModule.GeneralModule();
+            f.Show();
+            f.Focus();
+        }
     }
 }
