@@ -79,6 +79,7 @@
             this.UserRoles.Name = "UserRoles";
             this.UserRoles.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.UserRoles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.UserRoles_ItemClick);
             // 
             // UserBranch
             // 
@@ -89,6 +90,7 @@
             this.UserBranch.Name = "UserBranch";
             this.UserBranch.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.UserBranch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.UserBranch_ItemClick);
             // 
             // ClockBarStaticItem
             // 

@@ -49,5 +49,25 @@ namespace AutoDealer.GeneralModule
             f.Show();
             f.Focus();
         }
+
+        private void UserRoles_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            User.UserRoles f = new User.UserRoles
+            {
+                MdiParent = this
+            };
+            f.Show();
+            f.Focus();
+        }
+
+        private void UserBranch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            User.UserBranch f = new User.UserBranch
+            {
+                MdiParent = this
+            };
+            f.Show();
+            f.Focus();
+        }
     }
 }

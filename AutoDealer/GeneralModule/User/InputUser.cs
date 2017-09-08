@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.Xpo;
 using AutoDealer.DB.DMS;
+using AutoDealer.Additional.Permission;
 
 namespace AutoDealer.GeneralModule.User
 {
@@ -17,6 +18,8 @@ namespace AutoDealer.GeneralModule.User
     {
         XPQuery<BranchModel> branch_coll = Session.DefaultSession.Query<BranchModel>();
         XPQuery<UserModel> user_coll = Session.DefaultSession.Query<UserModel>();
+
+        UserAkses userAkses;
         public InputUser()
         {
             InitializeComponent();
@@ -25,6 +28,7 @@ namespace AutoDealer.GeneralModule.User
             {
                 branch.Properties.Items.Add(b.branch_name);
             }
+            userAkses = new UserAkses();
         }
 
         private void Username_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -89,7 +93,43 @@ namespace AutoDealer.GeneralModule.User
             if(dialog == DialogResult.Yes)
             {
                 UserModel user = user_coll.FirstOrDefault(u => u.username == username.Text);
+                user.Delete();
+                Tambah.PerformClick();
             }
+        }
+
+        private void Simpan_Click(object sender, EventArgs e)
+        {
+            UserModel user;
+
+            var finds = user_coll.Where(u => u.username == username.Text);
+            if(!finds.Any())
+            {
+                user = new UserModel(Session.DefaultSession);
+            } else
+            {
+                user = finds.First();
+            }
+
+            user.username = username.Text;
+            user.password = "123";
+            user.person_name = person_name.Text;
+            user.current_branch = branch.Text;
+            user.active = active.Checked;
+
+            user.Save();
+
+            MessageBox.Show("Berhasil disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            Edit.Enabled = true;
+            Hapus.Enabled = true;
+
+            username.Enabled = false;
+            person_name.Enabled = false;
+            branch.Enabled = false;
+            active.Enabled = false;
+
+            username.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
         }
     }
 }

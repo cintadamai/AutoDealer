@@ -79,6 +79,22 @@
     <Compile Include="DB\ModelCode\RolesModel.Designer.cs">
       <DependentUpon>RolesModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB\ModelCode\UnitModelModel.cs" />
+    <Compile Include="DB\ModelCode\UnitModelModel.Designer.cs">
+      <DependentUpon>UnitModelModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelCode\UnitModelTransmisiModel.cs" />
+    <Compile Include="DB\ModelCode\UnitModelTransmisiModel.Designer.cs">
+      <DependentUpon>UnitModelTransmisiModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelCode\UnitModelVariantModel.cs" />
+    <Compile Include="DB\ModelCode\UnitModelVariantModel.Designer.cs">
+      <DependentUpon>UnitModelVariantModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelCode\UnitModelWarnaModel.cs" />
+    <Compile Include="DB\ModelCode\UnitModelWarnaModel.Designer.cs">
+      <DependentUpon>UnitModelWarnaModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB\ModelCode\UserHasBranchModel.cs" />
     <Compile Include="DB\ModelCode\UserHasBranchModel.Designer.cs">
       <DependentUpon>UserHasBranchModel.cs</DependentUpon>
@@ -97,17 +113,35 @@
     <Compile Include="GeneralModule\GeneralModule.Designer.cs">
       <DependentUpon>GeneralModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralModule\User\AddRoleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralModule\User\AddRoleDialog.Designer.cs">
+      <DependentUpon>AddRoleDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralModule\User\InputUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GeneralModule\User\InputUser.Designer.cs">
       <DependentUpon>InputUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralModule\User\UserBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralModule\User\UserBranch.Designer.cs">
+      <DependentUpon>UserBranch.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralModule\User\UserLookup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GeneralModule\User\UserLookup.Designer.cs">
       <DependentUpon>UserLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralModule\User\UserRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralModule\User\UserRoles.Designer.cs">
+      <DependentUpon>UserRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -117,6 +151,48 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales\Master\MasterUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Master\MasterUnit.Designer.cs">
+      <DependentUpon>MasterUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Pembelian\Pembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Pembelian\Pembelian.Designer.cs">
+      <DependentUpon>Pembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Pembelian\PenerimaanUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Pembelian\PenerimaanUnit.Designer.cs">
+      <DependentUpon>PenerimaanUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Pembelian\PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Pembelian\PurchaseOrder.Designer.cs">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Penjualan\PengirimanUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Penjualan\PengirimanUnit.Designer.cs">
+      <DependentUpon>PengirimanUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Penjualan\Penjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Penjualan\Penjualan.Designer.cs">
+      <DependentUpon>Penjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Penjualan\SalesOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Penjualan\SalesOrder.Designer.cs">
+      <DependentUpon>SalesOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\Sales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,11 +208,20 @@
     <EmbeddedResource Include="GeneralModule\GeneralModule.resx">
       <DependentUpon>GeneralModule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneralModule\User\AddRoleDialog.resx">
+      <DependentUpon>AddRoleDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneralModule\User\InputUser.resx">
       <DependentUpon>InputUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneralModule\User\UserBranch.resx">
+      <DependentUpon>UserBranch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneralModule\User\UserLookup.resx">
       <DependentUpon>UserLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralModule\User\UserRoles.resx">
+      <DependentUpon>UserRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -220,8 +305,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Finance\" />
-    <Folder Include="Sales\Pembelian\" />
-    <Folder Include="Sales\Penjualan\" />
     <Folder Include="Sparepart\" />
     <Folder Include="Tax\" />
   </ItemGroup>

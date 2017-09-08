@@ -64,9 +64,16 @@ namespace AutoDealer.Additional.Permission
 
         public void AssignRoleToUser(UserModel user, RolesModel role)
         {
-            UserHasRolesModel userHasRoles = new UserHasRolesModel(Session.DefaultSession);
-            userHasRoles.username = user.username;
-            userHasRoles.rolename = role.rolename;
+            if(IsA(user, role.rolename))
+            {
+                return;
+            }
+
+            UserHasRolesModel userHasRoles = new UserHasRolesModel(Session.DefaultSession)
+            {
+                username = user.username,
+                rolename = role.rolename
+            };
             userHasRoles.Save();
         }
 
@@ -78,6 +85,11 @@ namespace AutoDealer.Additional.Permission
 
         public void AddPermissionToRole(RolesModel role, PermissionModel permission)
         {
+            if(RolesHasPermission(role, permission))
+            {
+                return;
+            }
+
             RolesHasPermissionModel roleHasPermission = new RolesHasPermissionModel(Session.DefaultSession)
             {
                 rolename = role.rolename,
@@ -110,6 +122,18 @@ namespace AutoDealer.Additional.Permission
         {
             UserHasBranchModel userHasBranch = user_has_branch_coll.FirstOrDefault(uhb => uhb.username == user.username && uhb.branch_name == branch.branch_name);
             userHasBranch.Delete();
+        }
+
+        public bool IsA(UserModel user, string rolename)
+        {
+            bool returned = false;
+            var count = user_roles_coll.Where(ur => ur.username == user.username && ur.rolename == rolename);
+            if(count.Count() > 0)
+            {
+                returned = true;
+            }
+
+            return returned;
         }
 
 

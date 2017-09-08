@@ -162,6 +162,7 @@
             this.Simpan.Size = new System.Drawing.Size(111, 38);
             this.Simpan.TabIndex = 1;
             this.Simpan.Text = "Simpan";
+            this.Simpan.Click += new System.EventHandler(this.Simpan_Click);
             // 
             // Tambah
             // 
