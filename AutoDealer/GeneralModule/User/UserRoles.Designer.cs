@@ -29,22 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Input User");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("User Roles");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("User Branch");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("User", new System.Windows.Forms.TreeNode[] {
-            treeNode12,
-            treeNode13,
-            treeNode14});
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("General Module", new System.Windows.Forms.TreeNode[] {
-            treeNode15});
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Sales");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Sparepart");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Service");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Body Repair");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Finance");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Tax");
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Input User");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("User Roles");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("User Branch");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("User", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("General Module", new System.Windows.Forms.TreeNode[] {
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Unit Model");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Unit", new System.Windows.Forms.TreeNode[] {
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Sales", new System.Windows.Forms.TreeNode[] {
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Sparepart");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Service");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Body Repair");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Finance");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Tax");
             this.Hapus = new DevExpress.XtraEditors.SimpleButton();
             this.Edit = new DevExpress.XtraEditors.SimpleButton();
             this.Simpan = new DevExpress.XtraEditors.SimpleButton();
@@ -190,9 +194,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.RolesComboBoxEdit.Size = new System.Drawing.Size(235, 20);
             this.RolesComboBoxEdit.TabIndex = 0;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "Tidak Boleh Kosong.";
-            this.validator.SetValidationRule(this.RolesComboBoxEdit, conditionValidationRule2);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Tidak Boleh Kosong.";
+            this.validator.SetValidationRule(this.RolesComboBoxEdit, conditionValidationRule1);
             // 
             // panelControl2
             // 
@@ -209,36 +213,40 @@
             this.PermissionTreeView.Enabled = false;
             this.PermissionTreeView.Location = new System.Drawing.Point(2, 2);
             this.PermissionTreeView.Name = "PermissionTreeView";
-            treeNode12.Name = "InputUser";
-            treeNode12.Text = "Input User";
-            treeNode13.Name = "UserRoles";
-            treeNode13.Text = "User Roles";
-            treeNode14.Name = "UserBranch";
-            treeNode14.Text = "User Branch";
-            treeNode15.Name = "ManageUser";
-            treeNode15.Text = "User";
-            treeNode16.Name = "GeneralModule";
-            treeNode16.Text = "General Module";
-            treeNode17.Name = "Sales";
-            treeNode17.Text = "Sales";
-            treeNode18.Name = "Sparepart";
-            treeNode18.Text = "Sparepart";
-            treeNode19.Name = "Service";
-            treeNode19.Text = "Service";
-            treeNode20.Name = "BodyRepair";
-            treeNode20.Text = "Body Repair";
-            treeNode21.Name = "Finance";
-            treeNode21.Text = "Finance";
-            treeNode22.Name = "Tax";
-            treeNode22.Text = "Tax";
+            treeNode1.Name = "InputUser";
+            treeNode1.Text = "Input User";
+            treeNode2.Name = "UserRoles";
+            treeNode2.Text = "User Roles";
+            treeNode3.Name = "UserBranch";
+            treeNode3.Text = "User Branch";
+            treeNode4.Name = "ManageUser";
+            treeNode4.Text = "User";
+            treeNode5.Name = "GeneralModule";
+            treeNode5.Text = "General Module";
+            treeNode6.Name = "UnitModel";
+            treeNode6.Text = "Unit Model";
+            treeNode7.Name = "Unit";
+            treeNode7.Text = "Unit";
+            treeNode8.Name = "Sales";
+            treeNode8.Text = "Sales";
+            treeNode9.Name = "Sparepart";
+            treeNode9.Text = "Sparepart";
+            treeNode10.Name = "Service";
+            treeNode10.Text = "Service";
+            treeNode11.Name = "BodyRepair";
+            treeNode11.Text = "Body Repair";
+            treeNode12.Name = "Finance";
+            treeNode12.Text = "Finance";
+            treeNode13.Name = "Tax";
+            treeNode13.Text = "Tax";
             this.PermissionTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode16,
-            treeNode17,
-            treeNode18,
-            treeNode19,
-            treeNode20,
-            treeNode21,
-            treeNode22});
+            treeNode5,
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13});
             this.PermissionTreeView.Size = new System.Drawing.Size(416, 437);
             this.PermissionTreeView.TabIndex = 0;
             // 

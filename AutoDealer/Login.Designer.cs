@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.BodyRepair = new DevExpress.XtraEditors.SimpleButton();
             this.About = new DevExpress.XtraEditors.SimpleButton();
@@ -142,6 +142,7 @@
             this.Sales.Size = new System.Drawing.Size(126, 36);
             this.Sales.TabIndex = 1;
             this.Sales.Text = "Sales";
+            this.Sales.Click += new System.EventHandler(this.Sales_Click);
             // 
             // GeneralModule
             // 
@@ -162,9 +163,9 @@
             this.username.Properties.Appearance.Options.UseBackColor = true;
             this.username.Size = new System.Drawing.Size(137, 20);
             this.username.TabIndex = 3;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "Harus di isi.";
-            this.dxValidationProvider1.SetValidationRule(this.username, conditionValidationRule3);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Harus di isi.";
+            this.dxValidationProvider1.SetValidationRule(this.username, conditionValidationRule1);
             // 
             // labelControl1
             // 
@@ -191,9 +192,9 @@
             this.password.Properties.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(137, 20);
             this.password.TabIndex = 5;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "Harus di isi.";
-            this.dxValidationProvider1.SetValidationRule(this.password, conditionValidationRule1);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "Harus di isi.";
+            this.dxValidationProvider1.SetValidationRule(this.password, conditionValidationRule2);
             // 
             // labelControl3
             // 

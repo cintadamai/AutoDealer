@@ -14,29 +14,51 @@ using System.ComponentModel;
 namespace AutoDealer.DB.DMS
 {
 
-    [Persistent(@"unit_model")]
-    public partial class UnitModelModel : XPLiteObject
+    [Persistent(@"unit_supplier")]
+    public partial class UnitSupplierModel : XPLiteObject
     {
-        long fid_model;
-        [Key(true)]
-        public long id_model
-        {
-            get { return fid_model; }
-            set { SetPropertyValue<long>("id_model", ref fid_model, value); }
-        }
-        string fmerk;
+        string fkode_supplier;
+        [Key]
         [Size(255)]
-        public string merk
+        public string kode_supplier
         {
-            get { return fmerk; }
-            set { SetPropertyValue<string>("merk", ref fmerk, value); }
+            get { return fkode_supplier; }
+            set { SetPropertyValue<string>("kode_supplier", ref fkode_supplier, value); }
         }
-        string ftipe_model;
+        string fnama_supplier;
         [Size(255)]
-        public string tipe_model
+        public string nama_supplier
         {
-            get { return ftipe_model; }
-            set { SetPropertyValue<string>("tipe_model", ref ftipe_model, value); }
+            get { return fnama_supplier; }
+            set { SetPropertyValue<string>("nama_supplier", ref fnama_supplier, value); }
+        }
+        string falamat;
+        [Size(255)]
+        public string alamat
+        {
+            get { return falamat; }
+            set { SetPropertyValue<string>("alamat", ref falamat, value); }
+        }
+        string fno_telepon;
+        [Size(255)]
+        public string no_telepon
+        {
+            get { return fno_telepon; }
+            set { SetPropertyValue<string>("no_telepon", ref fno_telepon, value); }
+        }
+        string fnpwp;
+        [Size(255)]
+        public string npwp
+        {
+            get { return fnpwp; }
+            set { SetPropertyValue<string>("npwp", ref fnpwp, value); }
+        }
+        string fnama_npwp;
+        [Size(255)]
+        public string nama_npwp
+        {
+            get { return fnama_npwp; }
+            set { SetPropertyValue<string>("nama_npwp", ref fnama_npwp, value); }
         }
         string fcreated_by;
         [Size(255)]

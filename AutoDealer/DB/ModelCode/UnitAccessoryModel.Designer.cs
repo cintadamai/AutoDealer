@@ -14,29 +14,29 @@ using System.ComponentModel;
 namespace AutoDealer.DB.DMS
 {
 
-    [Persistent(@"unit_model")]
-    public partial class UnitModelModel : XPLiteObject
+    [Persistent(@"unit_accessory")]
+    public partial class UnitAccessoryModel : XPLiteObject
     {
-        long fid_model;
+        long fid;
         [Key(true)]
-        public long id_model
+        public long id
         {
-            get { return fid_model; }
-            set { SetPropertyValue<long>("id_model", ref fid_model, value); }
+            get { return fid; }
+            set { SetPropertyValue<long>("id", ref fid, value); }
         }
-        string fmerk;
+        string fkode_accessory;
         [Size(255)]
-        public string merk
+        public string kode_accessory
         {
-            get { return fmerk; }
-            set { SetPropertyValue<string>("merk", ref fmerk, value); }
+            get { return fkode_accessory; }
+            set { SetPropertyValue<string>("kode_accessory", ref fkode_accessory, value); }
         }
-        string ftipe_model;
+        string fnama_accessory;
         [Size(255)]
-        public string tipe_model
+        public string nama_accessory
         {
-            get { return ftipe_model; }
-            set { SetPropertyValue<string>("tipe_model", ref ftipe_model, value); }
+            get { return fnama_accessory; }
+            set { SetPropertyValue<string>("nama_accessory", ref fnama_accessory, value); }
         }
         string fcreated_by;
         [Size(255)]

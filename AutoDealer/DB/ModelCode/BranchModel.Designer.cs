@@ -32,12 +32,11 @@ namespace AutoDealer.DB.DMS
             get { return falamat; }
             set { SetPropertyValue<string>("alamat", ref falamat, value); }
         }
-        string factive;
-        [Size(255)]
-        public string active
+        bool factive;
+        public bool active
         {
             get { return factive; }
-            set { SetPropertyValue<string>("active", ref factive, value); }
+            set { SetPropertyValue<bool>("active", ref factive, value); }
         }
         string fno_telepon;
         [Size(255)]

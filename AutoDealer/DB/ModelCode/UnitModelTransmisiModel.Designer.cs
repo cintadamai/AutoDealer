@@ -62,6 +62,13 @@ namespace AutoDealer.DB.DMS
             get { return fupdated_at; }
             set { SetPropertyValue<DateTime>("updated_at", ref fupdated_at, value); }
         }
+        string fnama_tarnsmisi;
+        [Size(255)]
+        public string nama_tarnsmisi
+        {
+            get { return fnama_tarnsmisi; }
+            set { SetPropertyValue<string>("nama_tarnsmisi", ref fnama_tarnsmisi, value); }
+        }
     }
 
 }

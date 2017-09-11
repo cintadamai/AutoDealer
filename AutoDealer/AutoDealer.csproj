@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -47,8 +50,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.4.0\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,7 +59,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -79,6 +81,14 @@
     <Compile Include="DB\ModelCode\RolesModel.Designer.cs">
       <DependentUpon>RolesModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB\ModelCode\UnitAccessoryModel.cs" />
+    <Compile Include="DB\ModelCode\UnitAccessoryModel.Designer.cs">
+      <DependentUpon>UnitAccessoryModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelCode\UnitCustomerModel.cs" />
+    <Compile Include="DB\ModelCode\UnitCustomerModel.Designer.cs">
+      <DependentUpon>UnitCustomerModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB\ModelCode\UnitModelModel.cs" />
     <Compile Include="DB\ModelCode\UnitModelModel.Designer.cs">
       <DependentUpon>UnitModelModel.cs</DependentUpon>
@@ -94,6 +104,22 @@
     <Compile Include="DB\ModelCode\UnitModelWarnaModel.cs" />
     <Compile Include="DB\ModelCode\UnitModelWarnaModel.Designer.cs">
       <DependentUpon>UnitModelWarnaModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelCode\UnitPurchaseAccessoryModel.cs" />
+    <Compile Include="DB\ModelCode\UnitPurchaseAccessoryModel.Designer.cs">
+      <DependentUpon>UnitPurchaseAccessoryModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelCode\UnitPurchaseDetailModel.cs" />
+    <Compile Include="DB\ModelCode\UnitPurchaseDetailModel.Designer.cs">
+      <DependentUpon>UnitPurchaseDetailModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelCode\UnitPurchaseModel.cs" />
+    <Compile Include="DB\ModelCode\UnitPurchaseModel.Designer.cs">
+      <DependentUpon>UnitPurchaseModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelCode\UnitSupplierModel.cs" />
+    <Compile Include="DB\ModelCode\UnitSupplierModel.Designer.cs">
+      <DependentUpon>UnitSupplierModel.cs</DependentUpon>
     </Compile>
     <Compile Include="DB\ModelCode\UserHasBranchModel.cs" />
     <Compile Include="DB\ModelCode\UserHasBranchModel.Designer.cs">
@@ -118,6 +144,12 @@
     </Compile>
     <Compile Include="GeneralModule\User\AddRoleDialog.Designer.cs">
       <DependentUpon>AddRoleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralModule\User\BranchLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralModule\User\BranchLookup.Designer.cs">
+      <DependentUpon>BranchLookup.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneralModule\User\InputUser.cs">
       <SubType>Form</SubType>
@@ -151,12 +183,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sales\Master\MasterUnit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sales\Master\MasterUnit.Designer.cs">
-      <DependentUpon>MasterUnit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Sales\Pembelian\Pembelian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +225,12 @@
     <Compile Include="Sales\Sales.Designer.cs">
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\Unit\UnitModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Unit\UnitModel.Designer.cs">
+      <DependentUpon>UnitModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\Service.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralModule\User\AddRoleDialog.resx">
       <DependentUpon>AddRoleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralModule\User\BranchLookup.resx">
+      <DependentUpon>BranchLookup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralModule\User\InputUser.resx">
       <DependentUpon>InputUser.cs</DependentUpon>
@@ -239,6 +274,9 @@
     </Compile>
     <EmbeddedResource Include="Sales\Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\Unit\UnitModel.resx">
+      <DependentUpon>UnitModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Service\Service.resx">
       <DependentUpon>Service.cs</DependentUpon>

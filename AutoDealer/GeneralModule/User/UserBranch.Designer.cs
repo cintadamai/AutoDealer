@@ -28,45 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.Hapus = new DevExpress.XtraEditors.SimpleButton();
             this.Edit = new DevExpress.XtraEditors.SimpleButton();
             this.Simpan = new DevExpress.XtraEditors.SimpleButton();
             this.Tambah = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.active = new DevExpress.XtraEditors.CheckEdit();
+            this.no_telepon = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.ButtonEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.MemoEdit();
+            this.branchname = new DevExpress.XtraEditors.ButtonEdit();
+            this.alamat = new DevExpress.XtraEditors.MemoEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.UserGridControl = new DevExpress.XtraGrid.GridControl();
+            this.UserGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colusername = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colperson_name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.hapusBranch = new DevExpress.XtraEditors.SimpleButton();
+            this.tambahBranch = new DevExpress.XtraEditors.SimpleButton();
+            this.BranchComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.BranchGridControl = new DevExpress.XtraGrid.GridControl();
+            this.BranchGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colbranchname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.InputValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
+            this.HapusValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
+            this.AssignBranchValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.active.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.no_telepon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.branchname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alamat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BranchComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BranchGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BranchGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InputValidationProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HapusValidationProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AssignBranchValidationProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // Hapus
@@ -78,6 +92,7 @@
             this.Hapus.Size = new System.Drawing.Size(111, 38);
             this.Hapus.TabIndex = 11;
             this.Hapus.Text = "Hapus";
+            this.Hapus.Click += new System.EventHandler(this.Hapus_Click);
             // 
             // Edit
             // 
@@ -88,6 +103,7 @@
             this.Edit.Size = new System.Drawing.Size(111, 38);
             this.Edit.TabIndex = 10;
             this.Edit.Text = "Edit";
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
             // 
             // Simpan
             // 
@@ -97,6 +113,7 @@
             this.Simpan.Size = new System.Drawing.Size(111, 38);
             this.Simpan.TabIndex = 9;
             this.Simpan.Text = "Simpan";
+            this.Simpan.Click += new System.EventHandler(this.Simpan_Click);
             // 
             // Tambah
             // 
@@ -106,37 +123,43 @@
             this.Tambah.Size = new System.Drawing.Size(111, 38);
             this.Tambah.TabIndex = 8;
             this.Tambah.Text = "Tambah";
+            this.Tambah.Click += new System.EventHandler(this.Tambah_Click);
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.checkEdit1);
-            this.panelControl1.Controls.Add(this.textEdit3);
+            this.panelControl1.Controls.Add(this.active);
+            this.panelControl1.Controls.Add(this.no_telepon);
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.labelControl1);
-            this.panelControl1.Controls.Add(this.textEdit1);
-            this.panelControl1.Controls.Add(this.textEdit2);
+            this.panelControl1.Controls.Add(this.branchname);
+            this.panelControl1.Controls.Add(this.alamat);
             this.panelControl1.Location = new System.Drawing.Point(12, 56);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(617, 137);
+            this.panelControl1.Size = new System.Drawing.Size(715, 137);
             this.panelControl1.TabIndex = 12;
             // 
-            // checkEdit1
+            // active
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(119, 69);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Caption = "Active";
-            this.checkEdit1.Size = new System.Drawing.Size(75, 19);
-            this.checkEdit1.TabIndex = 6;
+            this.active.Enabled = false;
+            this.active.Location = new System.Drawing.Point(119, 69);
+            this.active.Name = "active";
+            this.active.Properties.Caption = "Active";
+            this.active.Size = new System.Drawing.Size(75, 19);
+            this.active.TabIndex = 6;
             // 
-            // textEdit3
+            // no_telepon
             // 
-            this.textEdit3.Location = new System.Drawing.Point(119, 43);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose;
-            this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit3.Size = new System.Drawing.Size(156, 20);
-            this.textEdit3.TabIndex = 5;
+            this.no_telepon.Enabled = false;
+            this.no_telepon.Location = new System.Drawing.Point(119, 43);
+            this.no_telepon.Name = "no_telepon";
+            this.no_telepon.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose;
+            this.no_telepon.Properties.Appearance.Options.UseBackColor = true;
+            this.no_telepon.Size = new System.Drawing.Size(156, 20);
+            this.no_telepon.TabIndex = 5;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Harus di isi.";
+            this.InputValidationProvider.SetValidationRule(this.no_telepon, conditionValidationRule1);
             // 
             // labelControl3
             // 
@@ -162,114 +185,166 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Branch Name";
             // 
-            // textEdit1
+            // branchname
             // 
-            this.textEdit1.Location = new System.Drawing.Point(119, 17);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose;
-            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.branchname.Enabled = false;
+            this.branchname.Location = new System.Drawing.Point(119, 17);
+            this.branchname.Name = "branchname";
+            this.branchname.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose;
+            this.branchname.Properties.Appearance.Options.UseBackColor = true;
+            this.branchname.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.textEdit1.Size = new System.Drawing.Size(185, 20);
-            this.textEdit1.TabIndex = 1;
+            this.branchname.Size = new System.Drawing.Size(185, 20);
+            this.branchname.TabIndex = 1;
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "Tidak Boleh Kosong.";
+            this.HapusValidationProvider.SetValidationRule(this.branchname, conditionValidationRule2);
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "Harus di isi.";
+            this.InputValidationProvider.SetValidationRule(this.branchname, conditionValidationRule3);
             // 
-            // textEdit2
+            // alamat
             // 
-            this.textEdit2.Location = new System.Drawing.Point(430, 17);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose;
-            this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit2.Size = new System.Drawing.Size(152, 57);
-            this.textEdit2.TabIndex = 3;
+            this.alamat.Enabled = false;
+            this.alamat.Location = new System.Drawing.Point(430, 17);
+            this.alamat.Name = "alamat";
+            this.alamat.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose;
+            this.alamat.Properties.Appearance.Options.UseBackColor = true;
+            this.alamat.Size = new System.Drawing.Size(152, 57);
+            this.alamat.TabIndex = 3;
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "Harus di isi.";
+            this.InputValidationProvider.SetValidationRule(this.alamat, conditionValidationRule4);
             // 
             // panelControl2
             // 
-            this.panelControl2.Controls.Add(this.gridControl1);
+            this.panelControl2.Controls.Add(this.UserGridControl);
             this.panelControl2.Location = new System.Drawing.Point(12, 199);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(258, 308);
+            this.panelControl2.Size = new System.Drawing.Size(356, 308);
             this.panelControl2.TabIndex = 13;
             // 
-            // gridControl1
+            // UserGridControl
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 2);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(254, 304);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.UserGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UserGridControl.Location = new System.Drawing.Point(2, 2);
+            this.UserGridControl.MainView = this.UserGridView;
+            this.UserGridControl.Name = "UserGridControl";
+            this.UserGridControl.Size = new System.Drawing.Size(352, 304);
+            this.UserGridControl.TabIndex = 1;
+            this.UserGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.UserGridView});
             // 
-            // gridView1
+            // UserGridView
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.UserGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colusername,
+            this.colperson_name});
+            this.UserGridView.GridControl = this.UserGridControl;
+            this.UserGridView.Name = "UserGridView";
+            this.UserGridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.UserGridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.UserGridView.OptionsBehavior.Editable = false;
+            this.UserGridView.OptionsBehavior.ReadOnly = true;
+            // 
+            // colusername
+            // 
+            this.colusername.Caption = "Username";
+            this.colusername.FieldName = "username";
+            this.colusername.Name = "colusername";
+            this.colusername.Visible = true;
+            this.colusername.VisibleIndex = 0;
+            // 
+            // colperson_name
+            // 
+            this.colperson_name.Caption = "Nama Karyawan";
+            this.colperson_name.FieldName = "person_name";
+            this.colperson_name.Name = "colperson_name";
+            this.colperson_name.Visible = true;
+            this.colperson_name.VisibleIndex = 1;
             // 
             // panelControl3
             // 
             this.panelControl3.Controls.Add(this.panelControl4);
-            this.panelControl3.Controls.Add(this.gridControl2);
-            this.panelControl3.Location = new System.Drawing.Point(276, 199);
+            this.panelControl3.Controls.Add(this.BranchGridControl);
+            this.panelControl3.Location = new System.Drawing.Point(374, 199);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(353, 308);
             this.panelControl3.TabIndex = 14;
             // 
             // panelControl4
             // 
-            this.panelControl4.Controls.Add(this.simpleButton2);
-            this.panelControl4.Controls.Add(this.simpleButton1);
-            this.panelControl4.Controls.Add(this.comboBoxEdit1);
+            this.panelControl4.Controls.Add(this.hapusBranch);
+            this.panelControl4.Controls.Add(this.tambahBranch);
+            this.panelControl4.Controls.Add(this.BranchComboBoxEdit);
             this.panelControl4.Location = new System.Drawing.Point(5, 5);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(343, 65);
             this.panelControl4.TabIndex = 2;
             // 
-            // simpleButton2
+            // hapusBranch
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(169, 31);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(169, 23);
-            this.simpleButton2.TabIndex = 2;
-            this.simpleButton2.Text = "Hapus Branch";
+            this.hapusBranch.Location = new System.Drawing.Point(169, 31);
+            this.hapusBranch.Name = "hapusBranch";
+            this.hapusBranch.Size = new System.Drawing.Size(169, 23);
+            this.hapusBranch.TabIndex = 2;
+            this.hapusBranch.Text = "Hapus Branch";
+            this.hapusBranch.Click += new System.EventHandler(this.HapusBranch_Click);
             // 
-            // simpleButton1
+            // tambahBranch
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(5, 31);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(158, 23);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "Tambah Branch";
+            this.tambahBranch.Location = new System.Drawing.Point(5, 31);
+            this.tambahBranch.Name = "tambahBranch";
+            this.tambahBranch.Size = new System.Drawing.Size(158, 23);
+            this.tambahBranch.TabIndex = 1;
+            this.tambahBranch.Text = "Tambah Branch";
+            this.tambahBranch.Click += new System.EventHandler(this.TambahBranch_Click);
             // 
-            // comboBoxEdit1
+            // BranchComboBoxEdit
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(5, 5);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.BranchComboBoxEdit.Location = new System.Drawing.Point(5, 5);
+            this.BranchComboBoxEdit.Name = "BranchComboBoxEdit";
+            this.BranchComboBoxEdit.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose;
+            this.BranchComboBoxEdit.Properties.Appearance.Options.UseBackColor = true;
+            this.BranchComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(333, 20);
-            this.comboBoxEdit1.TabIndex = 0;
+            this.BranchComboBoxEdit.Size = new System.Drawing.Size(333, 20);
+            this.BranchComboBoxEdit.TabIndex = 0;
             // 
-            // gridControl2
+            // BranchGridControl
             // 
-            this.gridControl2.Location = new System.Drawing.Point(5, 76);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(343, 227);
-            this.gridControl2.TabIndex = 1;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.BranchGridControl.Location = new System.Drawing.Point(5, 76);
+            this.BranchGridControl.MainView = this.BranchGridView;
+            this.BranchGridControl.Name = "BranchGridControl";
+            this.BranchGridControl.Size = new System.Drawing.Size(343, 227);
+            this.BranchGridControl.TabIndex = 1;
+            this.BranchGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.BranchGridView});
             // 
-            // gridView2
+            // BranchGridView
             // 
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
+            this.BranchGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colbranchname});
+            this.BranchGridView.GridControl = this.BranchGridControl;
+            this.BranchGridView.Name = "BranchGridView";
+            this.BranchGridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.BranchGridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.BranchGridView.OptionsBehavior.Editable = false;
+            this.BranchGridView.OptionsBehavior.ReadOnly = true;
+            // 
+            // colbranchname
+            // 
+            this.colbranchname.Caption = "Branch Name";
+            this.colbranchname.FieldName = "branch_name";
+            this.colbranchname.Name = "colbranchname";
+            this.colbranchname.Visible = true;
+            this.colbranchname.VisibleIndex = 0;
             // 
             // UserBranch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 533);
+            this.ClientSize = new System.Drawing.Size(739, 533);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
@@ -279,24 +354,28 @@
             this.Controls.Add(this.Tambah);
             this.Name = "UserBranch";
             this.Text = "UserBranch";
+            this.Load += new System.EventHandler(this.UserBranch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.active.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.no_telepon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.branchname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alamat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BranchComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BranchGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BranchGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InputValidationProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HapusValidationProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AssignBranchValidationProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,20 +389,26 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.GridControl BranchGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView BranchGridView;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit no_telepon;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
-        private DevExpress.XtraEditors.ButtonEdit textEdit1;
-        private DevExpress.XtraEditors.MemoEdit textEdit2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.CheckEdit active;
+        private DevExpress.XtraEditors.ButtonEdit branchname;
+        private DevExpress.XtraEditors.MemoEdit alamat;
+        private DevExpress.XtraGrid.GridControl UserGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView UserGridView;
         private DevExpress.XtraEditors.PanelControl panelControl4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.SimpleButton hapusBranch;
+        private DevExpress.XtraEditors.SimpleButton tambahBranch;
+        private DevExpress.XtraEditors.ComboBoxEdit BranchComboBoxEdit;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider InputValidationProvider;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider HapusValidationProvider;
+        private DevExpress.XtraGrid.Columns.GridColumn colusername;
+        private DevExpress.XtraGrid.Columns.GridColumn colperson_name;
+        private DevExpress.XtraGrid.Columns.GridColumn colbranchname;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider AssignBranchValidationProvider;
     }
 }

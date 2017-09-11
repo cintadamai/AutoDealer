@@ -125,5 +125,12 @@ namespace AutoDealer
             f.Show();
             f.Focus();
         }
+
+        private void Sales_Click(object sender, EventArgs e)
+        {
+            AutoDealer.Sales.Sales f = new AutoDealer.Sales.Sales();
+            f.Show();
+            f.Focus();
+        }
     }
 }
