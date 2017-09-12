@@ -24,19 +24,21 @@ namespace AutoDealer.DB.DMS
             get { return fid; }
             set { SetPropertyValue<long>("id", ref fid, value); }
         }
-        string frolename;
+        RolesModel frolename;
         [Size(255)]
-        public string rolename
+        [Association(@"RolesHasPermissionModelReferencesRolesModel")]
+        public RolesModel rolename
         {
             get { return frolename; }
-            set { SetPropertyValue<string>("rolename", ref frolename, value); }
+            set { SetPropertyValue<RolesModel>("rolename", ref frolename, value); }
         }
-        string fpermission_name;
+        PermissionModel fpermission_name;
         [Size(255)]
-        public string permission_name
+        [Association(@"RolesHasPermissionModelReferencesPermissionModel")]
+        public PermissionModel permission_name
         {
             get { return fpermission_name; }
-            set { SetPropertyValue<string>("permission_name", ref fpermission_name, value); }
+            set { SetPropertyValue<PermissionModel>("permission_name", ref fpermission_name, value); }
         }
     }
 

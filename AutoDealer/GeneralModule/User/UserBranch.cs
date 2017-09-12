@@ -139,9 +139,12 @@ namespace AutoDealer.GeneralModule.User
             }
 
             var selected = UserGridView.GetFocusedRowCellValue(colusername);
-            var UserBranches = user_has_branch_coll.Where(uhb => uhb.username == selected.ToString()).Select(uhb => uhb.branch_name);
-            var Branches = branch_coll.Where(b => UserBranches.Contains(b.branch_name));
-            var NotBranches = branch_coll.Where(b => !UserBranches.Contains(b.branch_name));
+            UserModel user = user_coll.FirstOrDefault(u => u.username == selected.ToString());
+
+            var UserBranches = user.UserHasBranches.Select(ub => ub.branch_name);
+
+            var Branches = branch_coll.Where(b => UserBranches.Contains(b));
+            var NotBranches = branch_coll.Where(b => !UserBranches.Contains(b));
 
             BranchGridControl.DataSource = Branches;
 

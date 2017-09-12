@@ -38,6 +38,10 @@ namespace AutoDealer.DB.DMS
             get { return fcreated_by; }
             set { SetPropertyValue<string>("created_by", ref fcreated_by, value); }
         }
+        [Association(@"RolesHasPermissionModelReferencesRolesModel")]
+        public XPCollection<RolesHasPermissionModel> RolesHasPermissions { get { return GetCollection<RolesHasPermissionModel>("RolesHasPermissions"); } }
+        [Association(@"UserHasRolesModelReferencesRolesModel")]
+        public XPCollection<UserHasRolesModel> UserHasRolesModelCollection { get { return GetCollection<UserHasRolesModel>("UserHasRolesModelCollection"); } }
     }
 
 }

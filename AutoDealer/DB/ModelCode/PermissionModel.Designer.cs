@@ -58,6 +58,8 @@ namespace AutoDealer.DB.DMS
             get { return fcreated_by; }
             set { SetPropertyValue<string>("created_by", ref fcreated_by, value); }
         }
+        [Association(@"RolesHasPermissionModelReferencesPermissionModel")]
+        public XPCollection<RolesHasPermissionModel> RolesHasPermissions { get { return GetCollection<RolesHasPermissionModel>("RolesHasPermissions"); } }
     }
 
 }

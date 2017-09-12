@@ -17,19 +17,21 @@ namespace AutoDealer.DB.DMS
     [Persistent(@"user_has_roles")]
     public partial class UserHasRolesModel : XPLiteObject
     {
-        string fusername;
+        UserModel fusername;
         [Size(255)]
-        public string username
+        [Association(@"UserHasRolesModelReferencesUserModel")]
+        public UserModel username
         {
             get { return fusername; }
-            set { SetPropertyValue<string>("username", ref fusername, value); }
+            set { SetPropertyValue<UserModel>("username", ref fusername, value); }
         }
-        string frolename;
+        RolesModel frolename;
         [Size(255)]
-        public string rolename
+        [Association(@"UserHasRolesModelReferencesRolesModel")]
+        public RolesModel rolename
         {
             get { return frolename; }
-            set { SetPropertyValue<string>("rolename", ref frolename, value); }
+            set { SetPropertyValue<RolesModel>("rolename", ref frolename, value); }
         }
         long fid;
         [Key(true)]

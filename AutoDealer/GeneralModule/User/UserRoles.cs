@@ -47,10 +47,10 @@ namespace AutoDealer.GeneralModule.User
             } else
             {
                 PermissionTreeView.Enabled = true;
-                var users = user_has_roles_coll.Where(uhr => uhr.rolename == RolesComboBoxEdit.Text).Select(uhr => uhr.username);
+                var users = user_has_roles_coll.Where(uhr => uhr.rolename.rolename == RolesComboBoxEdit.Text).Select(uhr => uhr.username.username);
                 UserGridControl.DataSource = user_coll.Where(u => users.Contains(u.username));
 
-                var RolesPermissions = roles_has_permission.Where(rhp => rhp.rolename == RolesComboBoxEdit.Text).Select(rhp => rhp.permission_name);
+                var RolesPermissions = roles_has_permission.Where(rhp => rhp.rolename.rolename == RolesComboBoxEdit.Text).Select(rhp => rhp.permission_name.permission_name);
                 var Permissions = permission_coll.Where(p => RolesPermissions.Contains(p.permission_name));
                 var NotPermissions = permission_coll.Where(p => !RolesPermissions.Contains(p.permission_name));
 
@@ -118,7 +118,7 @@ namespace AutoDealer.GeneralModule.User
             {
                 UserModel user = f.User;
                 userAkses.AssignRoleToUser(user, roles);
-                var users = user_has_roles_coll.Where(uhr => uhr.rolename == RolesComboBoxEdit.Text).Select(uhr => uhr.username);
+                var users = user_has_roles_coll.Where(uhr => uhr.rolename.rolename == RolesComboBoxEdit.Text).Select(uhr => uhr.username.username);
                 UserGridControl.DataSource = user_coll.Where(u => users.Contains(u.username));
             }
         }
@@ -172,7 +172,7 @@ namespace AutoDealer.GeneralModule.User
                 UserModel userModel = user_coll.FirstOrDefault(u => u.username == selected.ToString());
                 RolesModel roles = roles_coll.FirstOrDefault(r => r.rolename == RolesComboBoxEdit.Text);
                 userAkses.RevokeRoleFromUser(userModel, roles);
-                var users = user_has_roles_coll.Where(uhr => uhr.rolename == RolesComboBoxEdit.Text).Select(uhr => uhr.username);
+                var users = user_has_roles_coll.Where(uhr => uhr.rolename.rolename == RolesComboBoxEdit.Text).Select(uhr => uhr.username.username);
                 UserGridControl.DataSource = user_coll.Where(u => users.Contains(u.username));
             }
             catch (Exception ex)

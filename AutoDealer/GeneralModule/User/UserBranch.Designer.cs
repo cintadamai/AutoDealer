@@ -246,6 +246,7 @@
             this.UserGridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
             this.UserGridView.OptionsBehavior.Editable = false;
             this.UserGridView.OptionsBehavior.ReadOnly = true;
+            this.UserGridView.OptionsDetail.EnableMasterViewMode = false;
             // 
             // colusername
             // 
@@ -331,6 +332,7 @@
             this.BranchGridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
             this.BranchGridView.OptionsBehavior.Editable = false;
             this.BranchGridView.OptionsBehavior.ReadOnly = true;
+            this.BranchGridView.OptionsDetail.EnableMasterViewMode = false;
             // 
             // colbranchname
             // 

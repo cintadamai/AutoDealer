@@ -45,6 +45,8 @@ namespace AutoDealer.DB.DMS
             get { return fno_telepon; }
             set { SetPropertyValue<string>("no_telepon", ref fno_telepon, value); }
         }
+        [Association(@"UserHasBranchModelReferencesBranchModel")]
+        public XPCollection<UserHasBranchModel> UserHasBranches { get { return GetCollection<UserHasBranchModel>("UserHasBranches"); } }
     }
 
 }

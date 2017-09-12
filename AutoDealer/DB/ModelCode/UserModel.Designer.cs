@@ -65,6 +65,10 @@ namespace AutoDealer.DB.DMS
             get { return fperson_name; }
             set { SetPropertyValue<string>("person_name", ref fperson_name, value); }
         }
+        [Association(@"UserHasBranchModelReferencesUserModel")]
+        public XPCollection<UserHasBranchModel> UserHasBranches { get { return GetCollection<UserHasBranchModel>("UserHasBranches"); } }
+        [Association(@"UserHasRolesModelReferencesUserModel")]
+        public XPCollection<UserHasRolesModel> UserHasRolesModelCollection { get { return GetCollection<UserHasRolesModel>("UserHasRolesModelCollection"); } }
     }
 
 }

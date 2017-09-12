@@ -19,6 +19,12 @@ namespace AutoDealer.Sales.Unit
         {
             InitializeComponent();
             ModelGridView.FocusedRowChanged += ModelGridView_FocusedRowChanged;
+            VariantGridView.FocusedRowChanged += VariantGridView_FocusedRowChanged;
+        }
+
+        private void VariantGridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            LoadDataGrid();
         }
 
         private void ModelGridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -28,7 +34,7 @@ namespace AutoDealer.Sales.Unit
                 return;
             }
 
-            LoadDataGrid();
+            ModelGridChange();
 
             if((merk.Text != "" || tipe_model.Text != "") && merk.Enabled == true && tipe_model.Enabled == true)
             {
@@ -112,25 +118,13 @@ namespace AutoDealer.Sales.Unit
 
         private void LoadDataGrid()
         {
-            ModelXpCollection.Reload();
-            ModelGridControl.DataSource = ModelXpCollection;
-
-            if(ModelGridView.RowCount == 0)
-            {
-                panelControlVariant.Enabled = false;
-            } else
-            {
-                panelControlVariant.Enabled = true;
-            }
-
             var SelectedModel = ModelGridView.GetFocusedRowCellValue(colid_model);
             XPQuery<UnitModelModel> model_coll = ModelUnitOfWork.Query<UnitModelModel>();
             UnitModelModel model = model_coll.FirstOrDefault(m => m.id_model == Convert.ToInt64(SelectedModel));
 
             XPQuery<UnitModelVariantModel> variant_coll = ModelUnitOfWork.Query<UnitModelVariantModel>();
-            VariantGridControl.DataSource = variant_coll.Where(v => v.id_model == model);
 
-            if(VariantGridView.RowCount <= 0)
+            if (VariantGridView.RowCount <= 0)
             {
                 panelControlTransmisi.Enabled = false;
                 panelControlWarna.Enabled = false;
@@ -148,6 +142,30 @@ namespace AutoDealer.Sales.Unit
 
             XPQuery<UnitModelWarnaModel> warna_coll = ModelUnitOfWork.Query<UnitModelWarnaModel>();
             WarnaGridControl.DataSource = warna_coll.Where(w => w.id_model == model && w.id_variant == variant);
+        }
+
+        private void ModelGridChange()
+        {
+            ModelXpCollection.Reload();
+            ModelGridControl.DataSource = ModelXpCollection;
+
+            if (ModelGridView.RowCount == 0)
+            {
+                panelControlVariant.Enabled = false;
+            }
+            else
+            {
+                panelControlVariant.Enabled = true;
+            }
+
+            var SelectedModel = ModelGridView.GetFocusedRowCellValue(colid_model);
+            XPQuery<UnitModelModel> model_coll = ModelUnitOfWork.Query<UnitModelModel>();
+            UnitModelModel model = model_coll.FirstOrDefault(m => m.id_model == Convert.ToInt64(SelectedModel));
+
+            XPQuery<UnitModelVariantModel> variant_coll = ModelUnitOfWork.Query<UnitModelVariantModel>();
+            VariantGridControl.DataSource = variant_coll.Where(v => v.id_model == model);
+
+            LoadDataGrid();
         }
 
         private void Hapus_Click(object sender, EventArgs e)

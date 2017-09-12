@@ -24,19 +24,21 @@ namespace AutoDealer.DB.DMS
             get { return fid; }
             set { SetPropertyValue<long>("id", ref fid, value); }
         }
-        string fusername;
+        UserModel fusername;
         [Size(255)]
-        public string username
+        [Association(@"UserHasBranchModelReferencesUserModel")]
+        public UserModel username
         {
             get { return fusername; }
-            set { SetPropertyValue<string>("username", ref fusername, value); }
+            set { SetPropertyValue<UserModel>("username", ref fusername, value); }
         }
-        string fbranch_name;
+        BranchModel fbranch_name;
         [Size(255)]
-        public string branch_name
+        [Association(@"UserHasBranchModelReferencesBranchModel")]
+        public BranchModel branch_name
         {
             get { return fbranch_name; }
-            set { SetPropertyValue<string>("branch_name", ref fbranch_name, value); }
+            set { SetPropertyValue<BranchModel>("branch_name", ref fbranch_name, value); }
         }
     }
 
