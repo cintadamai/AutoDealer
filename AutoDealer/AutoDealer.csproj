@@ -206,12 +206,6 @@
     <Compile Include="Sales\Pembelian\PenerimaanUnit.Designer.cs">
       <DependentUpon>PenerimaanUnit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sales\Pembelian\PurchaseOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sales\Pembelian\PurchaseOrder.Designer.cs">
-      <DependentUpon>PurchaseOrder.cs</DependentUpon>
-    </Compile>
     <Compile Include="Sales\Penjualan\PengirimanUnit.cs">
       <SubType>Form</SubType>
     </Compile>
