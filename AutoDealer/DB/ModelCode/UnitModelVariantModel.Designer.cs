@@ -24,11 +24,12 @@ namespace AutoDealer.DB.DMS
             get { return fid_variant; }
             set { SetPropertyValue<long>("id_variant", ref fid_variant, value); }
         }
-        long fid_model;
-        public long id_model
+        UnitModelModel fid_model;
+        [Association(@"UnitModelVariantModelReferencesUnitModelModel")]
+        public UnitModelModel id_model
         {
             get { return fid_model; }
-            set { SetPropertyValue<long>("id_model", ref fid_model, value); }
+            set { SetPropertyValue<UnitModelModel>("id_model", ref fid_model, value); }
         }
         string fnama_variant;
         [Size(255)]
@@ -63,6 +64,10 @@ namespace AutoDealer.DB.DMS
             get { return fupdated_at; }
             set { SetPropertyValue<DateTime>("updated_at", ref fupdated_at, value); }
         }
+        [Association(@"UnitModelTransmisiModelReferencesUnitModelVariantModel")]
+        public XPCollection<UnitModelTransmisiModel> UnitModelTransmisis { get { return GetCollection<UnitModelTransmisiModel>("UnitModelTransmisis"); } }
+        [Association(@"UnitModelWarnaModelReferencesUnitModelVariantModel")]
+        public XPCollection<UnitModelWarnaModel> UnitModelWarnas { get { return GetCollection<UnitModelWarnaModel>("UnitModelWarnas"); } }
     }
 
 }

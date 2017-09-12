@@ -64,6 +64,12 @@ namespace AutoDealer.DB.DMS
             get { return fupdated_at; }
             set { SetPropertyValue<DateTime>("updated_at", ref fupdated_at, value); }
         }
+        [Association(@"UnitModelVariantModelReferencesUnitModelModel")]
+        public XPCollection<UnitModelVariantModel> UnitModelVariants { get { return GetCollection<UnitModelVariantModel>("UnitModelVariants"); } }
+        [Association(@"UnitModelTransmisiModelReferencesUnitModelModel")]
+        public XPCollection<UnitModelTransmisiModel> UnitModelTransmisis { get { return GetCollection<UnitModelTransmisiModel>("UnitModelTransmisis"); } }
+        [Association(@"UnitModelWarnaModelReferencesUnitModelModel")]
+        public XPCollection<UnitModelWarnaModel> UnitModelWarnas { get { return GetCollection<UnitModelWarnaModel>("UnitModelWarnas"); } }
     }
 
 }

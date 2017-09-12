@@ -24,17 +24,19 @@ namespace AutoDealer.DB.DMS
             get { return fid_unit_transmisi; }
             set { SetPropertyValue<long>("id_unit_transmisi", ref fid_unit_transmisi, value); }
         }
-        long fid_model;
-        public long id_model
+        UnitModelModel fid_model;
+        [Association(@"UnitModelTransmisiModelReferencesUnitModelModel")]
+        public UnitModelModel id_model
         {
             get { return fid_model; }
-            set { SetPropertyValue<long>("id_model", ref fid_model, value); }
+            set { SetPropertyValue<UnitModelModel>("id_model", ref fid_model, value); }
         }
-        long fid_variant;
-        public long id_variant
+        UnitModelVariantModel fid_variant;
+        [Association(@"UnitModelTransmisiModelReferencesUnitModelVariantModel")]
+        public UnitModelVariantModel id_variant
         {
             get { return fid_variant; }
-            set { SetPropertyValue<long>("id_variant", ref fid_variant, value); }
+            set { SetPropertyValue<UnitModelVariantModel>("id_variant", ref fid_variant, value); }
         }
         string fcreated_by;
         [Size(255)]

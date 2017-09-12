@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule6 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.Hapus = new DevExpress.XtraEditors.SimpleButton();
             this.Edit = new DevExpress.XtraEditors.SimpleButton();
             this.Simpan = new DevExpress.XtraEditors.SimpleButton();
@@ -42,6 +42,7 @@
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.WarnaGridControl = new DevExpress.XtraGrid.GridControl();
             this.WarnaGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colwarna = new DevExpress.XtraGrid.Columns.GridColumn();
             this.hapusWarna = new DevExpress.XtraEditors.SimpleButton();
             this.tambahWarna = new DevExpress.XtraEditors.SimpleButton();
             this.nama_warna = new DevExpress.XtraEditors.TextEdit();
@@ -57,6 +58,7 @@
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.TransmisiGridControl = new DevExpress.XtraGrid.GridControl();
             this.TransmisiGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.coltransmisi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.hapusTransmisi = new DevExpress.XtraEditors.SimpleButton();
             this.nama_transmisi = new DevExpress.XtraEditors.TextEdit();
             this.tambahTransmisi = new DevExpress.XtraEditors.SimpleButton();
@@ -67,6 +69,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.VariantGridControl = new DevExpress.XtraGrid.GridControl();
             this.VariantGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colvariant = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -193,9 +196,25 @@
             // 
             // WarnaGridView
             // 
+            this.WarnaGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colwarna});
             this.WarnaGridView.GridControl = this.WarnaGridControl;
             this.WarnaGridView.Name = "WarnaGridView";
+            this.WarnaGridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.WarnaGridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.WarnaGridView.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.False;
+            this.WarnaGridView.OptionsBehavior.Editable = false;
+            this.WarnaGridView.OptionsBehavior.ReadOnly = true;
+            this.WarnaGridView.OptionsDetail.EnableMasterViewMode = false;
             this.WarnaGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // colwarna
+            // 
+            this.colwarna.Caption = "Warna";
+            this.colwarna.FieldName = "nama_warna";
+            this.colwarna.Name = "colwarna";
+            this.colwarna.Visible = true;
+            this.colwarna.VisibleIndex = 0;
             // 
             // hapusWarna
             // 
@@ -204,6 +223,7 @@
             this.hapusWarna.Size = new System.Drawing.Size(117, 23);
             this.hapusWarna.TabIndex = 31;
             this.hapusWarna.Text = "Hapus";
+            this.hapusWarna.Click += new System.EventHandler(this.HapusWarna_Click);
             // 
             // tambahWarna
             // 
@@ -212,6 +232,7 @@
             this.tambahWarna.Size = new System.Drawing.Size(104, 23);
             this.tambahWarna.TabIndex = 30;
             this.tambahWarna.Text = "Tambah";
+            this.tambahWarna.Click += new System.EventHandler(this.TambahWarna_Click);
             // 
             // nama_warna
             // 
@@ -221,9 +242,9 @@
             this.nama_warna.Properties.Appearance.Options.UseBackColor = true;
             this.nama_warna.Size = new System.Drawing.Size(227, 20);
             this.nama_warna.TabIndex = 29;
-            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule6.ErrorText = "Harus di isi.";
-            this.WarnaValidator.SetValidationRule(this.nama_warna, conditionValidationRule6);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Harus di isi.";
+            this.WarnaValidator.SetValidationRule(this.nama_warna, conditionValidationRule1);
             // 
             // panelControl5
             // 
@@ -266,6 +287,7 @@
             this.ModelGridView.Name = "ModelGridView";
             this.ModelGridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.ModelGridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.ModelGridView.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.False;
             this.ModelGridView.OptionsBehavior.Editable = false;
             this.ModelGridView.OptionsBehavior.ReadOnly = true;
             // 
@@ -328,8 +350,24 @@
             // 
             // TransmisiGridView
             // 
+            this.TransmisiGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.coltransmisi});
             this.TransmisiGridView.GridControl = this.TransmisiGridControl;
             this.TransmisiGridView.Name = "TransmisiGridView";
+            this.TransmisiGridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.TransmisiGridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.TransmisiGridView.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.False;
+            this.TransmisiGridView.OptionsBehavior.Editable = false;
+            this.TransmisiGridView.OptionsBehavior.ReadOnly = true;
+            this.TransmisiGridView.OptionsDetail.EnableMasterViewMode = false;
+            // 
+            // coltransmisi
+            // 
+            this.coltransmisi.Caption = "Transmisi";
+            this.coltransmisi.FieldName = "nama_tarnsmisi";
+            this.coltransmisi.Name = "coltransmisi";
+            this.coltransmisi.Visible = true;
+            this.coltransmisi.VisibleIndex = 0;
             // 
             // hapusTransmisi
             // 
@@ -338,6 +376,7 @@
             this.hapusTransmisi.Size = new System.Drawing.Size(117, 23);
             this.hapusTransmisi.TabIndex = 27;
             this.hapusTransmisi.Text = "Hapus";
+            this.hapusTransmisi.Click += new System.EventHandler(this.HapusTransmisi_Click);
             // 
             // nama_transmisi
             // 
@@ -347,9 +386,9 @@
             this.nama_transmisi.Properties.Appearance.Options.UseBackColor = true;
             this.nama_transmisi.Size = new System.Drawing.Size(227, 20);
             this.nama_transmisi.TabIndex = 25;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "Harus di isi.";
-            this.TransmisiValidator.SetValidationRule(this.nama_transmisi, conditionValidationRule1);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "Harus di isi.";
+            this.TransmisiValidator.SetValidationRule(this.nama_transmisi, conditionValidationRule2);
             // 
             // tambahTransmisi
             // 
@@ -358,6 +397,7 @@
             this.tambahTransmisi.Size = new System.Drawing.Size(104, 23);
             this.tambahTransmisi.TabIndex = 26;
             this.tambahTransmisi.Text = "Tambah";
+            this.tambahTransmisi.Click += new System.EventHandler(this.TambahTransmisi_Click);
             // 
             // panelControlVariant
             // 
@@ -377,6 +417,7 @@
             this.hapusVariant.Size = new System.Drawing.Size(95, 23);
             this.hapusVariant.TabIndex = 24;
             this.hapusVariant.Text = "Hapus";
+            this.hapusVariant.Click += new System.EventHandler(this.HapusVariant_Click);
             // 
             // tambahVariant
             // 
@@ -385,6 +426,7 @@
             this.tambahVariant.Size = new System.Drawing.Size(95, 23);
             this.tambahVariant.TabIndex = 23;
             this.tambahVariant.Text = "Tambah";
+            this.tambahVariant.Click += new System.EventHandler(this.TambahVariant_Click);
             // 
             // nama_variant
             // 
@@ -394,9 +436,9 @@
             this.nama_variant.Properties.Appearance.Options.UseBackColor = true;
             this.nama_variant.Size = new System.Drawing.Size(200, 20);
             this.nama_variant.TabIndex = 22;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "Harus di isi.";
-            this.VariantValidator.SetValidationRule(this.nama_variant, conditionValidationRule2);
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "Harus di isi.";
+            this.VariantValidator.SetValidationRule(this.nama_variant, conditionValidationRule3);
             // 
             // panelControl1
             // 
@@ -419,8 +461,24 @@
             // 
             // VariantGridView
             // 
+            this.VariantGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colvariant});
             this.VariantGridView.GridControl = this.VariantGridControl;
             this.VariantGridView.Name = "VariantGridView";
+            this.VariantGridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.VariantGridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.VariantGridView.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.False;
+            this.VariantGridView.OptionsBehavior.Editable = false;
+            this.VariantGridView.OptionsBehavior.ReadOnly = true;
+            this.VariantGridView.OptionsDetail.EnableMasterViewMode = false;
+            // 
+            // colvariant
+            // 
+            this.colvariant.Caption = "Variant";
+            this.colvariant.FieldName = "nama_variant";
+            this.colvariant.Name = "colvariant";
+            this.colvariant.Visible = true;
+            this.colvariant.VisibleIndex = 0;
             // 
             // labelControl1
             // 
@@ -473,9 +531,9 @@
             this.tipe_model.Properties.Appearance.Options.UseBackColor = true;
             this.tipe_model.Size = new System.Drawing.Size(160, 20);
             this.tipe_model.TabIndex = 5;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "Harus di isi.";
-            this.InputValidator.SetValidationRule(this.tipe_model, conditionValidationRule3);
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "Harus di isi.";
+            this.InputValidator.SetValidationRule(this.tipe_model, conditionValidationRule4);
             // 
             // labelControl6
             // 
@@ -493,9 +551,9 @@
             this.merk.Properties.Appearance.Options.UseBackColor = true;
             this.merk.Size = new System.Drawing.Size(199, 20);
             this.merk.TabIndex = 3;
-            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule4.ErrorText = "Harus di isi.";
-            this.InputValidator.SetValidationRule(this.merk, conditionValidationRule4);
+            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule5.ErrorText = "Harus di isi.";
+            this.InputValidator.SetValidationRule(this.merk, conditionValidationRule5);
             // 
             // labelControl5
             // 
@@ -542,6 +600,7 @@
             this.Controls.Add(this.Tambah);
             this.Name = "UnitModel";
             this.Text = "UnitModel";
+            this.Load += new System.EventHandler(this.UnitModel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControlWarna)).EndInit();
             this.panelControlWarna.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
@@ -633,5 +692,8 @@
         private DevExpress.XtraEditors.TextEdit merk;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider InputValidator;
+        private DevExpress.XtraGrid.Columns.GridColumn colvariant;
+        private DevExpress.XtraGrid.Columns.GridColumn coltransmisi;
+        private DevExpress.XtraGrid.Columns.GridColumn colwarna;
     }
 }
