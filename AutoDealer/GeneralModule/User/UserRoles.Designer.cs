@@ -40,15 +40,17 @@
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("General Module", new System.Windows.Forms.TreeNode[] {
             treeNode4});
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Unit Model");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Unit", new System.Windows.Forms.TreeNode[] {
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Sales", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Unit Accessory");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Unit", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
             treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Sparepart");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Service");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Body Repair");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Finance");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Tax");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Sales", new System.Windows.Forms.TreeNode[] {
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Sparepart");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Service");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Body Repair");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Finance");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Tax");
             this.Hapus = new DevExpress.XtraEditors.SimpleButton();
             this.Edit = new DevExpress.XtraEditors.SimpleButton();
             this.Simpan = new DevExpress.XtraEditors.SimpleButton();
@@ -226,28 +228,30 @@
             treeNode5.Text = "General Module";
             treeNode6.Name = "UnitModel";
             treeNode6.Text = "Unit Model";
-            treeNode7.Name = "Unit";
-            treeNode7.Text = "Unit";
-            treeNode8.Name = "Sales";
-            treeNode8.Text = "Sales";
-            treeNode9.Name = "Sparepart";
-            treeNode9.Text = "Sparepart";
-            treeNode10.Name = "Service";
-            treeNode10.Text = "Service";
-            treeNode11.Name = "BodyRepair";
-            treeNode11.Text = "Body Repair";
-            treeNode12.Name = "Finance";
-            treeNode12.Text = "Finance";
-            treeNode13.Name = "Tax";
-            treeNode13.Text = "Tax";
+            treeNode7.Name = "UnitAccessory";
+            treeNode7.Text = "Unit Accessory";
+            treeNode8.Name = "Unit";
+            treeNode8.Text = "Unit";
+            treeNode9.Name = "Sales";
+            treeNode9.Text = "Sales";
+            treeNode10.Name = "Sparepart";
+            treeNode10.Text = "Sparepart";
+            treeNode11.Name = "Service";
+            treeNode11.Text = "Service";
+            treeNode12.Name = "BodyRepair";
+            treeNode12.Text = "Body Repair";
+            treeNode13.Name = "Finance";
+            treeNode13.Text = "Finance";
+            treeNode14.Name = "Tax";
+            treeNode14.Text = "Tax";
             this.PermissionTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode5,
-            treeNode8,
             treeNode9,
             treeNode10,
             treeNode11,
             treeNode12,
-            treeNode13});
+            treeNode13,
+            treeNode14});
             this.PermissionTreeView.Size = new System.Drawing.Size(416, 437);
             this.PermissionTreeView.TabIndex = 0;
             // 

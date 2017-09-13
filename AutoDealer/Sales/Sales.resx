@@ -163,6 +163,30 @@
         /BinT/9FP/F4/UqocUHBhDQwU0yUJeTCxM8Klu/nA8H/AAfFxE75VL7mAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="UnitAccessory.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABN0RVh0VGl0
+        bGUAR2F1Z2U7TGluZWFyO9ybY/EAAAQ/SURBVFhHxZb7U1RlGMdPYxfLbvZPdPWGiqLj2G2mGqfbVOYt
+        8oLAsiwkAruwwHJZ0JYFVrIYYMQxIxAVMW8pWIJUPxaNle0utSj9UAjLtWX1h2/P877nnJXmNNEvpzPz
+        mefZ73v2/X7Pw3sABcD/iqFoJoaimRiKZmIomomhaCaGopnwNYe4U+Wu/8jds+Sev8Eaf/8OxXeg91Lt
+        wW+wz4imr+Fr+kpQwxyQ+IgqolrUXkljL7yCHup74G1gLqOSamU9IWo3PCoV+7t6RIiqxm6ahPnXng+7
+        eP5zFW/DJSGMT90UTEzdwvik7Me516uqa2uT8vOYqnH9J0aZCeoJrlN/3kL5B50c4F7FW/+lHsB9JoSy
+        07+ihCg++QuKTvSjoD2I/GMBOI4GkNvqR3bLVWQ1/4TMwz8i/dAPSDt4BalN35NRFP27tiOYuY3YSryL
+        oC0RAdsWBNI3I2CVjE5EMUkB3LUXOMB9iqdODUAp3WTs++I3YhBVXdfh7bwOz/kB7Dk3gPKzFO4UheNg
+        HUE41WD2Nj+SG/rEk7HxtcIMwoYBp1WSn4ZQngUhhwX+1I0Ij0fFlMt85znAPOX9jy6KADyeEjKouTiI
+        6q5B1fyabl7KkyFzV0e/MM9TzXOO/Iyk+u8QpicLZiSSqTQPsXG+NA45UhGyp1CADRgZi4ofZ0nN5zIA
+        Hwa+wiKANCik0TuPB+XYyUQb+3s0dhuN3SrGfgXJjX3YUd+HbXXfiifjUftpzP40wrJJGPotRArzNq7u
+        XI9huk8EqD7HAe5XKvZ3ygDjN8VT8EYxSKM6cjv0BLKflr2Guj48xjpB68OkS7iPwQFcVWc5wAOKu1YG
+        mLG5XjUTWXmzmK5tqJloRjHDG6NqVXuNMQpQ5BUBHlTc+y6IAPzF1c8nqYZRJDy7VTWdxoqn31E3jWL5
+        mk1yI/oct2q9qLy2eOUbusGC5a/qpk/GrdP1xxa9iBvhafFaFlaekQFK6TTGAuyQN9OXOYAwpc8r1m6h
+        KsMsW7NR3zAu4S29XxT/OoaoMguWvSI07p9Yso5qBEPhiAgwxAHoR13gEQEeUvg08sWmq57bridf+Uyi
+        2ID7+LWbdaOlqzdII9poScKbsicWxr8mNDZ6aunLaj+Nxxe/hD+oMo8ufIFqRARwek5zgIcVF51GEYBT
+        ChNOKzfSNtERxnxfRGykPRn30kTVb+tnrI1E8DtVPuzOvSLAfMXllQG0X5ecTlZ+K9Q3Q2iySmL6DOiA
+        yjV13fDNkuTvPSUnkFXc2m2v+AyO8g7kEjllJ5Bd2i7YXdKOrJLjyCo+hl2uo8h0tSGzqA0ZBUcENmcr
+        0vNbBNa8FlgczUizf4pUezMsuZ8gJeewIDn7Y8HO3cwhJBGJ1rrLFGAeQX8Q+DRymn9n/ix4ZBbwfWw+
+        x/C/FDMxFM3EUDQTQ9FMDEUzMRTNxFA0E0PRPKD8BczmqaC6ek4gAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="xtraTabbedMdiManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

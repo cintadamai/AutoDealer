@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.UnitModel = new DevExpress.XtraBars.BarButtonItem();
+            this.UnitAccessory = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.Unit = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
@@ -44,9 +45,10 @@
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
-            this.UnitModel});
+            this.UnitModel,
+            this.UnitAccessory});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 2;
+            this.ribbonControl1.MaxItemId = 3;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -63,6 +65,17 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.UnitModel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.UnitModel_ItemClick);
             // 
+            // UnitAccessory
+            // 
+            this.UnitAccessory.Caption = "Unit Accessory";
+            this.UnitAccessory.Enabled = false;
+            this.UnitAccessory.Id = 2;
+            this.UnitAccessory.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("UnitAccessory.ImageOptions.Image")));
+            this.UnitAccessory.Name = "UnitAccessory";
+            this.UnitAccessory.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.UnitAccessory.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.UnitAccessory_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -74,6 +87,7 @@
             // 
             this.Unit.Enabled = false;
             this.Unit.ItemLinks.Add(this.UnitModel);
+            this.Unit.ItemLinks.Add(this.UnitAccessory);
             this.Unit.Name = "Unit";
             this.Unit.Text = "Unit";
             // 
@@ -107,5 +121,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup Unit;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem UnitModel;
+        private DevExpress.XtraBars.BarButtonItem UnitAccessory;
     }
 }

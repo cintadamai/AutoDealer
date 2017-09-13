@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule6 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.Hapus = new DevExpress.XtraEditors.SimpleButton();
             this.Edit = new DevExpress.XtraEditors.SimpleButton();
             this.Simpan = new DevExpress.XtraEditors.SimpleButton();
@@ -170,9 +170,9 @@
             this.panelControlWarna.Controls.Add(this.hapusWarna);
             this.panelControlWarna.Controls.Add(this.tambahWarna);
             this.panelControlWarna.Controls.Add(this.nama_warna);
-            this.panelControlWarna.Location = new System.Drawing.Point(468, 272);
+            this.panelControlWarna.Location = new System.Drawing.Point(570, 272);
             this.panelControlWarna.Name = "panelControlWarna";
-            this.panelControlWarna.Size = new System.Drawing.Size(237, 282);
+            this.panelControlWarna.Size = new System.Drawing.Size(289, 282);
             this.panelControlWarna.TabIndex = 19;
             // 
             // panelControl7
@@ -180,7 +180,7 @@
             this.panelControl7.Controls.Add(this.WarnaGridControl);
             this.panelControl7.Location = new System.Drawing.Point(5, 60);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(227, 215);
+            this.panelControl7.Size = new System.Drawing.Size(279, 215);
             this.panelControl7.TabIndex = 28;
             // 
             // WarnaGridControl
@@ -189,7 +189,7 @@
             this.WarnaGridControl.Location = new System.Drawing.Point(2, 2);
             this.WarnaGridControl.MainView = this.WarnaGridView;
             this.WarnaGridControl.Name = "WarnaGridControl";
-            this.WarnaGridControl.Size = new System.Drawing.Size(223, 211);
+            this.WarnaGridControl.Size = new System.Drawing.Size(275, 211);
             this.WarnaGridControl.TabIndex = 0;
             this.WarnaGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.WarnaGridView});
@@ -218,9 +218,9 @@
             // 
             // hapusWarna
             // 
-            this.hapusWarna.Location = new System.Drawing.Point(115, 31);
+            this.hapusWarna.Location = new System.Drawing.Point(145, 31);
             this.hapusWarna.Name = "hapusWarna";
-            this.hapusWarna.Size = new System.Drawing.Size(117, 23);
+            this.hapusWarna.Size = new System.Drawing.Size(137, 23);
             this.hapusWarna.TabIndex = 31;
             this.hapusWarna.Text = "Hapus";
             this.hapusWarna.Click += new System.EventHandler(this.HapusWarna_Click);
@@ -229,7 +229,7 @@
             // 
             this.tambahWarna.Location = new System.Drawing.Point(5, 31);
             this.tambahWarna.Name = "tambahWarna";
-            this.tambahWarna.Size = new System.Drawing.Size(104, 23);
+            this.tambahWarna.Size = new System.Drawing.Size(134, 23);
             this.tambahWarna.TabIndex = 30;
             this.tambahWarna.Text = "Tambah";
             this.tambahWarna.Click += new System.EventHandler(this.TambahWarna_Click);
@@ -240,18 +240,18 @@
             this.nama_warna.Name = "nama_warna";
             this.nama_warna.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose;
             this.nama_warna.Properties.Appearance.Options.UseBackColor = true;
-            this.nama_warna.Size = new System.Drawing.Size(227, 20);
+            this.nama_warna.Size = new System.Drawing.Size(277, 20);
             this.nama_warna.TabIndex = 29;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "Harus di isi.";
-            this.WarnaValidator.SetValidationRule(this.nama_warna, conditionValidationRule1);
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "Harus di isi.";
+            this.WarnaValidator.SetValidationRule(this.nama_warna, conditionValidationRule4);
             // 
             // panelControl5
             // 
             this.panelControl5.Controls.Add(this.ModelGridControl);
-            this.panelControl5.Location = new System.Drawing.Point(325, 58);
+            this.panelControl5.Location = new System.Drawing.Point(363, 58);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(380, 184);
+            this.panelControl5.Size = new System.Drawing.Size(498, 184);
             this.panelControl5.TabIndex = 17;
             // 
             // ModelGridControl
@@ -261,7 +261,7 @@
             this.ModelGridControl.Location = new System.Drawing.Point(2, 2);
             this.ModelGridControl.MainView = this.ModelGridView;
             this.ModelGridControl.Name = "ModelGridControl";
-            this.ModelGridControl.Size = new System.Drawing.Size(376, 180);
+            this.ModelGridControl.Size = new System.Drawing.Size(494, 180);
             this.ModelGridControl.TabIndex = 0;
             this.ModelGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ModelGridView});
@@ -290,6 +290,8 @@
             this.ModelGridView.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.False;
             this.ModelGridView.OptionsBehavior.Editable = false;
             this.ModelGridView.OptionsBehavior.ReadOnly = true;
+            this.ModelGridView.OptionsSelection.InvertSelection = true;
+            this.ModelGridView.OptionsSelection.MultiSelect = true;
             // 
             // colid_model
             // 
@@ -324,9 +326,9 @@
             this.panelControlTransmisi.Controls.Add(this.hapusTransmisi);
             this.panelControlTransmisi.Controls.Add(this.nama_transmisi);
             this.panelControlTransmisi.Controls.Add(this.tambahTransmisi);
-            this.panelControlTransmisi.Location = new System.Drawing.Point(225, 272);
+            this.panelControlTransmisi.Location = new System.Drawing.Point(276, 272);
             this.panelControlTransmisi.Name = "panelControlTransmisi";
-            this.panelControlTransmisi.Size = new System.Drawing.Size(237, 282);
+            this.panelControlTransmisi.Size = new System.Drawing.Size(288, 282);
             this.panelControlTransmisi.TabIndex = 20;
             // 
             // panelControl6
@@ -334,7 +336,7 @@
             this.panelControl6.Controls.Add(this.TransmisiGridControl);
             this.panelControl6.Location = new System.Drawing.Point(5, 60);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(227, 215);
+            this.panelControl6.Size = new System.Drawing.Size(278, 215);
             this.panelControl6.TabIndex = 22;
             // 
             // TransmisiGridControl
@@ -343,7 +345,7 @@
             this.TransmisiGridControl.Location = new System.Drawing.Point(2, 2);
             this.TransmisiGridControl.MainView = this.TransmisiGridView;
             this.TransmisiGridControl.Name = "TransmisiGridControl";
-            this.TransmisiGridControl.Size = new System.Drawing.Size(223, 211);
+            this.TransmisiGridControl.Size = new System.Drawing.Size(274, 211);
             this.TransmisiGridControl.TabIndex = 0;
             this.TransmisiGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.TransmisiGridView});
@@ -371,9 +373,9 @@
             // 
             // hapusTransmisi
             // 
-            this.hapusTransmisi.Location = new System.Drawing.Point(115, 31);
+            this.hapusTransmisi.Location = new System.Drawing.Point(152, 31);
             this.hapusTransmisi.Name = "hapusTransmisi";
-            this.hapusTransmisi.Size = new System.Drawing.Size(117, 23);
+            this.hapusTransmisi.Size = new System.Drawing.Size(131, 23);
             this.hapusTransmisi.TabIndex = 27;
             this.hapusTransmisi.Text = "Hapus";
             this.hapusTransmisi.Click += new System.EventHandler(this.HapusTransmisi_Click);
@@ -384,17 +386,17 @@
             this.nama_transmisi.Name = "nama_transmisi";
             this.nama_transmisi.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose;
             this.nama_transmisi.Properties.Appearance.Options.UseBackColor = true;
-            this.nama_transmisi.Size = new System.Drawing.Size(227, 20);
+            this.nama_transmisi.Size = new System.Drawing.Size(278, 20);
             this.nama_transmisi.TabIndex = 25;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "Harus di isi.";
-            this.TransmisiValidator.SetValidationRule(this.nama_transmisi, conditionValidationRule2);
+            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule5.ErrorText = "Harus di isi.";
+            this.TransmisiValidator.SetValidationRule(this.nama_transmisi, conditionValidationRule5);
             // 
             // tambahTransmisi
             // 
             this.tambahTransmisi.Location = new System.Drawing.Point(5, 31);
             this.tambahTransmisi.Name = "tambahTransmisi";
-            this.tambahTransmisi.Size = new System.Drawing.Size(104, 23);
+            this.tambahTransmisi.Size = new System.Drawing.Size(132, 23);
             this.tambahTransmisi.TabIndex = 26;
             this.tambahTransmisi.Text = "Tambah";
             this.tambahTransmisi.Click += new System.EventHandler(this.TambahTransmisi_Click);
@@ -407,14 +409,14 @@
             this.panelControlVariant.Controls.Add(this.panelControl1);
             this.panelControlVariant.Location = new System.Drawing.Point(9, 272);
             this.panelControlVariant.Name = "panelControlVariant";
-            this.panelControlVariant.Size = new System.Drawing.Size(210, 282);
+            this.panelControlVariant.Size = new System.Drawing.Size(261, 282);
             this.panelControlVariant.TabIndex = 20;
             // 
             // hapusVariant
             // 
-            this.hapusVariant.Location = new System.Drawing.Point(110, 31);
+            this.hapusVariant.Location = new System.Drawing.Point(140, 31);
             this.hapusVariant.Name = "hapusVariant";
-            this.hapusVariant.Size = new System.Drawing.Size(95, 23);
+            this.hapusVariant.Size = new System.Drawing.Size(116, 23);
             this.hapusVariant.TabIndex = 24;
             this.hapusVariant.Text = "Hapus";
             this.hapusVariant.Click += new System.EventHandler(this.HapusVariant_Click);
@@ -423,7 +425,7 @@
             // 
             this.tambahVariant.Location = new System.Drawing.Point(5, 31);
             this.tambahVariant.Name = "tambahVariant";
-            this.tambahVariant.Size = new System.Drawing.Size(95, 23);
+            this.tambahVariant.Size = new System.Drawing.Size(129, 23);
             this.tambahVariant.TabIndex = 23;
             this.tambahVariant.Text = "Tambah";
             this.tambahVariant.Click += new System.EventHandler(this.TambahVariant_Click);
@@ -434,18 +436,18 @@
             this.nama_variant.Name = "nama_variant";
             this.nama_variant.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose;
             this.nama_variant.Properties.Appearance.Options.UseBackColor = true;
-            this.nama_variant.Size = new System.Drawing.Size(200, 20);
+            this.nama_variant.Size = new System.Drawing.Size(251, 20);
             this.nama_variant.TabIndex = 22;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "Harus di isi.";
-            this.VariantValidator.SetValidationRule(this.nama_variant, conditionValidationRule3);
+            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule6.ErrorText = "Harus di isi.";
+            this.VariantValidator.SetValidationRule(this.nama_variant, conditionValidationRule6);
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.VariantGridControl);
             this.panelControl1.Location = new System.Drawing.Point(5, 60);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(200, 217);
+            this.panelControl1.Size = new System.Drawing.Size(251, 217);
             this.panelControl1.TabIndex = 21;
             // 
             // VariantGridControl
@@ -454,7 +456,7 @@
             this.VariantGridControl.Location = new System.Drawing.Point(2, 2);
             this.VariantGridControl.MainView = this.VariantGridView;
             this.VariantGridControl.Name = "VariantGridControl";
-            this.VariantGridControl.Size = new System.Drawing.Size(196, 213);
+            this.VariantGridControl.Size = new System.Drawing.Size(247, 213);
             this.VariantGridControl.TabIndex = 0;
             this.VariantGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.VariantGridView});
@@ -494,7 +496,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(228, 246);
+            this.labelControl2.Location = new System.Drawing.Point(276, 248);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(79, 23);
             this.labelControl2.TabIndex = 22;
@@ -504,7 +506,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(471, 248);
+            this.labelControl3.Location = new System.Drawing.Point(570, 248);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(55, 23);
             this.labelControl3.TabIndex = 23;
@@ -520,7 +522,7 @@
             this.panelControl8.Controls.Add(this.labelControl4);
             this.panelControl8.Location = new System.Drawing.Point(12, 60);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(307, 180);
+            this.panelControl8.Size = new System.Drawing.Size(345, 180);
             this.panelControl8.TabIndex = 24;
             // 
             // tipe_model
@@ -531,9 +533,9 @@
             this.tipe_model.Properties.Appearance.Options.UseBackColor = true;
             this.tipe_model.Size = new System.Drawing.Size(160, 20);
             this.tipe_model.TabIndex = 5;
-            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule4.ErrorText = "Harus di isi.";
-            this.InputValidator.SetValidationRule(this.tipe_model, conditionValidationRule4);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Harus di isi.";
+            this.InputValidator.SetValidationRule(this.tipe_model, conditionValidationRule1);
             // 
             // labelControl6
             // 
@@ -551,9 +553,9 @@
             this.merk.Properties.Appearance.Options.UseBackColor = true;
             this.merk.Size = new System.Drawing.Size(199, 20);
             this.merk.TabIndex = 3;
-            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule5.ErrorText = "Harus di isi.";
-            this.InputValidator.SetValidationRule(this.merk, conditionValidationRule5);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "Harus di isi.";
+            this.InputValidator.SetValidationRule(this.merk, conditionValidationRule2);
             // 
             // labelControl5
             // 
@@ -585,7 +587,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 586);
+            this.ClientSize = new System.Drawing.Size(873, 586);
             this.Controls.Add(this.panelControl8);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
