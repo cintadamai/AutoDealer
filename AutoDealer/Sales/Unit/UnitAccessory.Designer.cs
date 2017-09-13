@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.Hapus = new DevExpress.XtraEditors.SimpleButton();
@@ -44,13 +43,14 @@
             this.id = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.AccessoryXpServerCollectionSource = new DevExpress.Xpo.XPServerCollectionSource(this.components);
-            this.AccessoryUnitOfWork = new DevExpress.Xpo.UnitOfWork(this.components);
+            this.AccessoryBindingSource = new System.Windows.Forms.BindingSource();
+            this.AccessoryXpCollection = new DevExpress.Xpo.XPCollection();
+            this.AccessoryUnitOfWork = new DevExpress.Xpo.UnitOfWork();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colkode_accessory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnama_accessory = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Validator = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
+            this.Validator = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nama_accessory.Properties)).BeginInit();
@@ -59,7 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccessoryXpServerCollectionSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccessoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccessoryXpCollection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AccessoryUnitOfWork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Validator)).BeginInit();
@@ -74,6 +75,7 @@
             this.Hapus.Size = new System.Drawing.Size(111, 38);
             this.Hapus.TabIndex = 19;
             this.Hapus.Text = "Hapus";
+            this.Hapus.Click += new System.EventHandler(this.Hapus_Click);
             // 
             // Edit
             // 
@@ -84,6 +86,7 @@
             this.Edit.Size = new System.Drawing.Size(111, 38);
             this.Edit.TabIndex = 18;
             this.Edit.Text = "Edit";
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
             // 
             // Simpan
             // 
@@ -93,6 +96,7 @@
             this.Simpan.Size = new System.Drawing.Size(111, 38);
             this.Simpan.TabIndex = 17;
             this.Simpan.Text = "Simpan";
+            this.Simpan.Click += new System.EventHandler(this.Simpan_Click);
             // 
             // Tambah
             // 
@@ -102,6 +106,7 @@
             this.Tambah.Size = new System.Drawing.Size(111, 38);
             this.Tambah.TabIndex = 16;
             this.Tambah.Text = "Tambah";
+            this.Tambah.Click += new System.EventHandler(this.Tambah_Click);
             // 
             // panelControl1
             // 
@@ -184,7 +189,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.AccessoryXpServerCollectionSource;
+            this.gridControl1.DataSource = this.AccessoryBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
@@ -194,12 +199,15 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // AccessoryXpServerCollectionSource
+            // AccessoryBindingSource
             // 
-            this.AccessoryXpServerCollectionSource.DefaultSorting = "id ASC";
-            this.AccessoryXpServerCollectionSource.DisplayableProperties = "id;kode_accessory;nama_accessory;created_by;updated_by;created_at;updated_at";
-            this.AccessoryXpServerCollectionSource.ObjectType = typeof(AutoDealer.DB.DMS.UnitAccessoryModel);
-            this.AccessoryXpServerCollectionSource.Session = this.AccessoryUnitOfWork;
+            this.AccessoryBindingSource.DataSource = this.AccessoryXpCollection;
+            // 
+            // AccessoryXpCollection
+            // 
+            this.AccessoryXpCollection.DeleteObjectOnRemove = true;
+            this.AccessoryXpCollection.ObjectType = typeof(AutoDealer.DB.DMS.UnitAccessoryModel);
+            this.AccessoryXpCollection.Session = this.AccessoryUnitOfWork;
             // 
             // AccessoryUnitOfWork
             // 
@@ -216,6 +224,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.gridView1.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsSelection.InvertSelection = true;
             this.gridView1.OptionsSelection.MultiSelect = true;
@@ -269,7 +278,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccessoryXpServerCollectionSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccessoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccessoryXpCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AccessoryUnitOfWork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Validator)).EndInit();
@@ -287,7 +297,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.Xpo.XPServerCollectionSource AccessoryXpServerCollectionSource;
         private DevExpress.Xpo.UnitOfWork AccessoryUnitOfWork;
         private DevExpress.XtraGrid.Columns.GridColumn colid;
         private DevExpress.XtraGrid.Columns.GridColumn colkode_accessory;
@@ -299,5 +308,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit kode_accessory;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider Validator;
+        private System.Windows.Forms.BindingSource AccessoryBindingSource;
+        private DevExpress.Xpo.XPCollection AccessoryXpCollection;
     }
 }
