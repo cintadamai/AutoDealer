@@ -92,6 +92,8 @@ namespace AutoDealer.DB.DMS
             get { return fid; }
             set { SetPropertyValue<long>("id", ref fid, value); }
         }
+        [Association(@"UnitPurchaseModelReferencesUnitSupplierModel")]
+        public XPCollection<UnitPurchaseModel> UnitPurchases { get { return GetCollection<UnitPurchaseModel>("UnitPurchases"); } }
     }
 
 }

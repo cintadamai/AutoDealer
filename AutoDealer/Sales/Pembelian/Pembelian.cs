@@ -17,5 +17,10 @@ namespace AutoDealer.Sales.Pembelian
         {
             InitializeComponent();
         }
+
+        private void Pembelian_Load(object sender, EventArgs e)
+        {
+            tanggal_pembelian.EditValue = DateTime.Now;
+        }
     }
 }

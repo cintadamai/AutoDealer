@@ -32,12 +32,12 @@ namespace AutoDealer.DB.DMS
             get { return fno_referensi; }
             set { SetPropertyValue<string>("no_referensi", ref fno_referensi, value); }
         }
-        string fkode_supplier;
-        [Size(255)]
-        public string kode_supplier
+        UnitSupplierModel fkode_supplier;
+        [Association(@"UnitPurchaseModelReferencesUnitSupplierModel")]
+        public UnitSupplierModel kode_supplier
         {
             get { return fkode_supplier; }
-            set { SetPropertyValue<string>("kode_supplier", ref fkode_supplier, value); }
+            set { SetPropertyValue<UnitSupplierModel>("kode_supplier", ref fkode_supplier, value); }
         }
         DateTime ftanggal_pembelian;
         public DateTime tanggal_pembelian
@@ -96,6 +96,42 @@ namespace AutoDealer.DB.DMS
             get { return fupdated_at; }
             set { SetPropertyValue<DateTime>("updated_at", ref fupdated_at, value); }
         }
+        string fno_faktur_pajak;
+        [Size(255)]
+        public string no_faktur_pajak
+        {
+            get { return fno_faktur_pajak; }
+            set { SetPropertyValue<string>("no_faktur_pajak", ref fno_faktur_pajak, value); }
+        }
+        bool fisPPN;
+        public bool isPPN
+        {
+            get { return fisPPN; }
+            set { SetPropertyValue<bool>("isPPN", ref fisPPN, value); }
+        }
+        decimal fnilai;
+        public decimal nilai
+        {
+            get { return fnilai; }
+            set { SetPropertyValue<decimal>("nilai", ref fnilai, value); }
+        }
+        decimal fpotongan;
+        public decimal potongan
+        {
+            get { return fpotongan; }
+            set { SetPropertyValue<decimal>("potongan", ref fpotongan, value); }
+        }
+        BranchModel fbranchid;
+        [Association(@"UnitPurchaseModelReferencesBranchModel")]
+        public BranchModel branchid
+        {
+            get { return fbranchid; }
+            set { SetPropertyValue<BranchModel>("branchid", ref fbranchid, value); }
+        }
+        [Association(@"UnitPurchaseAccessoryModelReferencesUnitPurchaseModel")]
+        public XPCollection<UnitPurchaseAccessoryModel> UnitPurchaseAccessories { get { return GetCollection<UnitPurchaseAccessoryModel>("UnitPurchaseAccessories"); } }
+        [Association(@"UnitPurchaseDetailModelReferencesUnitPurchaseModel")]
+        public XPCollection<UnitPurchaseDetailModel> UnitPurchaseDetails { get { return GetCollection<UnitPurchaseDetailModel>("UnitPurchaseDetails"); } }
     }
 
 }

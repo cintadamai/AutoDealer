@@ -24,12 +24,13 @@ namespace AutoDealer.DB.DMS
             get { return fid; }
             set { SetPropertyValue<long>("id", ref fid, value); }
         }
-        string fkode_pembelian;
+        UnitPurchaseModel fkode_pembelian;
         [Size(255)]
-        public string kode_pembelian
+        [Association(@"UnitPurchaseDetailModelReferencesUnitPurchaseModel")]
+        public UnitPurchaseModel kode_pembelian
         {
             get { return fkode_pembelian; }
-            set { SetPropertyValue<string>("kode_pembelian", ref fkode_pembelian, value); }
+            set { SetPropertyValue<UnitPurchaseModel>("kode_pembelian", ref fkode_pembelian, value); }
         }
         long fmodel;
         public long model

@@ -93,11 +93,9 @@ namespace AutoDealer.Sales.Pembelian
                     nama_npwp = nama_npwp.Text
                 };
 
-                string BranchCode = Additional.DB.GetColumnName((int)Login.User.current_branch.id);
-
                 unitSupplier.Save();
                 SupplierUnitOfWork.CommitChanges();
-                unitSupplier.kode_supplier = Additional.DB.AutoIncrement("SUP/S/" + BranchCode + "/", unitSupplier.id);
+                unitSupplier.kode_supplier = Additional.DB.AutoIncrement("SUP/S/", unitSupplier.id);
                 unitSupplier.Save();
                 SupplierXpCollection.Add(unitSupplier);
                 SupplierUnitOfWork.CommitChanges();
@@ -144,6 +142,11 @@ namespace AutoDealer.Sales.Pembelian
             UnitSupplierModel unitSupplier = supps.FirstOrDefault(s => s.kode_supplier == kode_supplier.Text);
             SupplierXpCollection.Remove(unitSupplier);
             SupplierUnitOfWork.CommitChanges();
+        }
+
+        private void Supplier_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
