@@ -93,9 +93,11 @@ namespace AutoDealer.Sales.Pembelian
                     nama_npwp = nama_npwp.Text
                 };
 
+                string BranchCode = Additional.DB.GetColumnName((int)Login.User.current_branch.id);
+
                 unitSupplier.Save();
                 SupplierUnitOfWork.CommitChanges();
-                unitSupplier.kode_supplier = Additional.DB.AutoIncrement("SUP/S/", unitSupplier.id);
+                unitSupplier.kode_supplier = Additional.DB.AutoIncrement("SUP/S/" + BranchCode + "/", unitSupplier.id);
                 unitSupplier.Save();
                 SupplierXpCollection.Add(unitSupplier);
                 SupplierUnitOfWork.CommitChanges();

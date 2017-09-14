@@ -41,7 +41,7 @@ namespace AutoDealer.GeneralModule.User
                 username.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
                 username.Text = user.username;
                 person_name.Text = user.person_name;
-                branch.Text = user.current_branch;
+                branch.Text = user.current_branch.branch_name;
                 active.Checked = user.active;
                 Edit.Enabled = true;
                 Hapus.Enabled = true;
@@ -111,10 +111,12 @@ namespace AutoDealer.GeneralModule.User
                 user = finds.First();
             }
 
+            BranchModel b = branch_coll.FirstOrDefault(br => br.branch_name == branch.Text);
+
             user.username = username.Text;
             user.password = "123";
             user.person_name = person_name.Text;
-            user.current_branch = branch.Text;
+            user.current_branch = b;
             user.active = active.Checked;
 
             user.Save();
@@ -128,6 +130,11 @@ namespace AutoDealer.GeneralModule.User
             person_name.Enabled = false;
             branch.Enabled = false;
             active.Enabled = false;
+
+            if(user.username == Login.User.username)
+            {
+                Login.User = user;
+            }
 
             username.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
         }

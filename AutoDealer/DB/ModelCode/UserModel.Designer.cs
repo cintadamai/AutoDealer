@@ -38,12 +38,12 @@ namespace AutoDealer.DB.DMS
             get { return factive; }
             set { SetPropertyValue<bool>("active", ref factive, value); }
         }
-        string fcurrent_branch;
-        [Size(255)]
-        public string current_branch
+        BranchModel fcurrent_branch;
+        [Association(@"UserModelReferencesBranchModel")]
+        public BranchModel current_branch
         {
             get { return fcurrent_branch; }
-            set { SetPropertyValue<string>("current_branch", ref fcurrent_branch, value); }
+            set { SetPropertyValue<BranchModel>("current_branch", ref fcurrent_branch, value); }
         }
         string fcreated_by;
         [Size(255)]

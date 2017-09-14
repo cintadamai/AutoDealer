@@ -55,6 +55,8 @@ namespace AutoDealer.DB.DMS
         public XPCollection<UserHasBranchModel> UserHasBranches { get { return GetCollection<UserHasBranchModel>("UserHasBranches"); } }
         [Association(@"UserHasBranchModelReferencesBranchModel1")]
         public XPCollection<UserHasBranchModel> UserHasBranches1 { get { return GetCollection<UserHasBranchModel>("UserHasBranches1"); } }
+        [Association(@"UserModelReferencesBranchModel")]
+        public XPCollection<UserModel> Users { get { return GetCollection<UserModel>("Users"); } }
     }
 
 }

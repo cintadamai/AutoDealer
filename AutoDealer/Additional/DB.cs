@@ -23,7 +23,7 @@ namespace AutoDealer.Additional
             return generated;
         }
 
-        static string GetColumnName(int index)
+        public static string GetColumnName(int index)
         {
             const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -32,7 +32,7 @@ namespace AutoDealer.Additional
             if (index >= letters.Length)
                 value += letters[index / letters.Length - 1];
 
-            value += letters[index % letters.Length];
+            value += letters[index % letters.Length - 1];
 
             return value;
         }

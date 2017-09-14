@@ -33,6 +33,7 @@ namespace AutoDealer.DB.DMS
             set { SetPropertyValue<UserModel>("username", ref fusername, value); }
         }
         BranchModel fbranch_name;
+        [Indexed(Name = @"ibranch_name_user_has_branch")]
         [Size(255)]
         [Association(@"UserHasBranchModelReferencesBranchModel")]
         public BranchModel branch_name
