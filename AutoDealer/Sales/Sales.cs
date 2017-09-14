@@ -40,6 +40,29 @@ namespace AutoDealer.Sales
                 Unit.Enabled = true;
                 UnitAccessory.Enabled = true;
             }
+
+            if(userAkses.Can("Pembelian"))
+            {
+                Pembelian.Enabled = true;
+            }
+
+            if(userAkses.Can("PembelianUnit"))
+            {
+                Pembelian.Enabled = true;
+                PembelianUnit.Enabled = true;
+            }
+
+            if(userAkses.Can("ReturPembelian"))
+            {
+                Pembelian.Enabled = true;
+                ReturPembelian.Enabled = true;
+            }
+            
+            if(userAkses.Can("UnitSupplier"))
+            {
+                Pembelian.Enabled = true;
+                UnitSupplier.Enabled = true;
+            }
         }
 
         private void UnitModel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -55,6 +78,16 @@ namespace AutoDealer.Sales
         private void UnitAccessory_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Unit.UnitAccessory f = new AutoDealer.Sales.Unit.UnitAccessory
+            {
+                MdiParent = this
+            };
+            f.Show();
+            f.Focus();
+        }
+
+        private void UnitSupplier_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AutoDealer.Sales.Pembelian.Supplier f = new AutoDealer.Sales.Pembelian.Supplier
             {
                 MdiParent = this
             };

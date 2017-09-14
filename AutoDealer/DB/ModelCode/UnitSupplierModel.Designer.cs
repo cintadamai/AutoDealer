@@ -18,7 +18,6 @@ namespace AutoDealer.DB.DMS
     public partial class UnitSupplierModel : XPLiteObject
     {
         string fkode_supplier;
-        [Key]
         [Size(255)]
         public string kode_supplier
         {
@@ -46,19 +45,19 @@ namespace AutoDealer.DB.DMS
             get { return fno_telepon; }
             set { SetPropertyValue<string>("no_telepon", ref fno_telepon, value); }
         }
-        string fnpwp;
-        [Size(255)]
-        public string npwp
-        {
-            get { return fnpwp; }
-            set { SetPropertyValue<string>("npwp", ref fnpwp, value); }
-        }
         string fnama_npwp;
         [Size(255)]
         public string nama_npwp
         {
             get { return fnama_npwp; }
             set { SetPropertyValue<string>("nama_npwp", ref fnama_npwp, value); }
+        }
+        string fnpwp;
+        [Size(255)]
+        public string npwp
+        {
+            get { return fnpwp; }
+            set { SetPropertyValue<string>("npwp", ref fnpwp, value); }
         }
         string fcreated_by;
         [Size(255)]
@@ -85,6 +84,13 @@ namespace AutoDealer.DB.DMS
         {
             get { return fupdated_at; }
             set { SetPropertyValue<DateTime>("updated_at", ref fupdated_at, value); }
+        }
+        long fid;
+        [Key(true)]
+        public long id
+        {
+            get { return fid; }
+            set { SetPropertyValue<long>("id", ref fid, value); }
         }
     }
 

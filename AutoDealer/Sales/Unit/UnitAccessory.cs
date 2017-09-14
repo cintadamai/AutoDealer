@@ -116,6 +116,11 @@ namespace AutoDealer.Sales.Unit
             UnitAccessoryModel accessoryModel = ((UnitAccessoryModel)AccessoryXpCollection[current]);
             AccessoryXpCollection.Remove(accessoryModel);
             AccessoryUnitOfWork.CommitChanges();
+
+            if(AccessoryBindingSource.Count <= 0)
+            {
+                Tambah.PerformClick();
+            }
         }
     }
 }

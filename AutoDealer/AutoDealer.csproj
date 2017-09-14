@@ -79,6 +79,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Additional\DB.cs" />
     <Compile Include="Additional\Permission\UserAkses.cs" />
     <Compile Include="DB\ModelCode\BranchModel.cs" />
     <Compile Include="DB\ModelCode\BranchModel.Designer.cs">
@@ -205,29 +206,11 @@
     <Compile Include="Sales\Pembelian\Pembelian.Designer.cs">
       <DependentUpon>Pembelian.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sales\Pembelian\PenerimaanUnit.cs">
+    <Compile Include="Sales\Pembelian\Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sales\Pembelian\PenerimaanUnit.Designer.cs">
-      <DependentUpon>PenerimaanUnit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sales\Penjualan\PengirimanUnit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sales\Penjualan\PengirimanUnit.Designer.cs">
-      <DependentUpon>PengirimanUnit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sales\Penjualan\Penjualan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sales\Penjualan\Penjualan.Designer.cs">
-      <DependentUpon>Penjualan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sales\Penjualan\SalesOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sales\Penjualan\SalesOrder.Designer.cs">
-      <DependentUpon>SalesOrder.cs</DependentUpon>
+    <Compile Include="Sales\Pembelian\Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\Sales.cs">
       <SubType>Form</SubType>
@@ -288,6 +271,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Sales\Pembelian\Pembelian.resx">
+      <DependentUpon>Pembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\Pembelian\Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
@@ -412,6 +401,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

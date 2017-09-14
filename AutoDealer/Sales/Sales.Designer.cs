@@ -33,8 +33,13 @@
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.UnitModel = new DevExpress.XtraBars.BarButtonItem();
             this.UnitAccessory = new DevExpress.XtraBars.BarButtonItem();
+            this.PembelianUnit = new DevExpress.XtraBars.BarButtonItem();
+            this.ReturPembelian = new DevExpress.XtraBars.BarButtonItem();
+            this.UnitSupplier = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.Unit = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.Pembelian = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -46,12 +51,16 @@
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.UnitModel,
-            this.UnitAccessory});
+            this.UnitAccessory,
+            this.PembelianUnit,
+            this.ReturPembelian,
+            this.UnitSupplier});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 3;
+            this.ribbonControl1.MaxItemId = 6;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
+            this.ribbonPage1,
+            this.ribbonPage2});
             this.ribbonControl1.Size = new System.Drawing.Size(737, 141);
             // 
             // UnitModel
@@ -76,6 +85,37 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.UnitAccessory.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.UnitAccessory_ItemClick);
             // 
+            // PembelianUnit
+            // 
+            this.PembelianUnit.Caption = "Pembelian";
+            this.PembelianUnit.Enabled = false;
+            this.PembelianUnit.Id = 3;
+            this.PembelianUnit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("PembelianUnit.ImageOptions.Image")));
+            this.PembelianUnit.Name = "PembelianUnit";
+            this.PembelianUnit.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
+            // ReturPembelian
+            // 
+            this.ReturPembelian.Caption = "Retur Pembelian";
+            this.ReturPembelian.Enabled = false;
+            this.ReturPembelian.Id = 4;
+            this.ReturPembelian.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ReturPembelian.ImageOptions.Image")));
+            this.ReturPembelian.Name = "ReturPembelian";
+            this.ReturPembelian.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
+            // UnitSupplier
+            // 
+            this.UnitSupplier.Caption = "Supplier";
+            this.UnitSupplier.Enabled = false;
+            this.UnitSupplier.Id = 5;
+            this.UnitSupplier.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("UnitSupplier.ImageOptions.Image")));
+            this.UnitSupplier.Name = "UnitSupplier";
+            this.UnitSupplier.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.UnitSupplier.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.UnitSupplier_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -90,6 +130,22 @@
             this.Unit.ItemLinks.Add(this.UnitAccessory);
             this.Unit.Name = "Unit";
             this.Unit.Text = "Unit";
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.Pembelian});
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "Pembelian";
+            // 
+            // Pembelian
+            // 
+            this.Pembelian.Enabled = false;
+            this.Pembelian.ItemLinks.Add(this.UnitSupplier);
+            this.Pembelian.ItemLinks.Add(this.PembelianUnit);
+            this.Pembelian.ItemLinks.Add(this.ReturPembelian);
+            this.Pembelian.Name = "Pembelian";
+            this.Pembelian.Text = "Pembelian";
             // 
             // xtraTabbedMdiManager1
             // 
@@ -122,5 +178,10 @@
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem UnitModel;
         private DevExpress.XtraBars.BarButtonItem UnitAccessory;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup Pembelian;
+        private DevExpress.XtraBars.BarButtonItem PembelianUnit;
+        private DevExpress.XtraBars.BarButtonItem ReturPembelian;
+        private DevExpress.XtraBars.BarButtonItem UnitSupplier;
     }
 }
