@@ -94,5 +94,15 @@ namespace AutoDealer.Sales
             f.Show();
             f.Focus();
         }
+
+        private void PembelianUnit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AutoDealer.Sales.Pembelian.Pembelian f = new AutoDealer.Sales.Pembelian.Pembelian
+            {
+                MdiParent = this
+            };
+            f.Show();
+            f.Focus();
+        }
     }
 }

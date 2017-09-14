@@ -94,6 +94,7 @@
             this.PembelianUnit.Name = "PembelianUnit";
             this.PembelianUnit.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.PembelianUnit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.PembelianUnit_ItemClick);
             // 
             // ReturPembelian
             // 

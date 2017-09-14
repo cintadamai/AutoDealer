@@ -18,7 +18,6 @@ namespace AutoDealer.DB.DMS
     public partial class BranchModel : XPLiteObject
     {
         string fbranch_name;
-        [Key]
         [Size(255)]
         public string branch_name
         {
@@ -45,8 +44,17 @@ namespace AutoDealer.DB.DMS
             get { return fno_telepon; }
             set { SetPropertyValue<string>("no_telepon", ref fno_telepon, value); }
         }
+        long fid;
+        [Key(true)]
+        public long id
+        {
+            get { return fid; }
+            set { SetPropertyValue<long>("id", ref fid, value); }
+        }
         [Association(@"UserHasBranchModelReferencesBranchModel")]
         public XPCollection<UserHasBranchModel> UserHasBranches { get { return GetCollection<UserHasBranchModel>("UserHasBranches"); } }
+        [Association(@"UserHasBranchModelReferencesBranchModel1")]
+        public XPCollection<UserHasBranchModel> UserHasBranches1 { get { return GetCollection<UserHasBranchModel>("UserHasBranches1"); } }
     }
 
 }

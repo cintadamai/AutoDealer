@@ -40,6 +40,13 @@ namespace AutoDealer.DB.DMS
             get { return fbranch_name; }
             set { SetPropertyValue<BranchModel>("branch_name", ref fbranch_name, value); }
         }
+        BranchModel fbranchid;
+        [Association(@"UserHasBranchModelReferencesBranchModel1")]
+        public BranchModel branchid
+        {
+            get { return fbranchid; }
+            set { SetPropertyValue<BranchModel>("branchid", ref fbranchid, value); }
+        }
     }
 
 }
