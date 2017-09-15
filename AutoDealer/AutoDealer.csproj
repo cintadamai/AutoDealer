@@ -118,6 +118,10 @@
     <Compile Include="DB\ModelCode\UnitModelVariantModel.Designer.cs">
       <DependentUpon>UnitModelVariantModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB\ModelCode\UnitmodelviewModel.cs" />
+    <Compile Include="DB\ModelCode\UnitmodelviewModel.Designer.cs">
+      <DependentUpon>UnitmodelviewModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB\ModelCode\UnitModelWarnaModel.cs" />
     <Compile Include="DB\ModelCode\UnitModelWarnaModel.Designer.cs">
       <DependentUpon>UnitModelWarnaModel.cs</DependentUpon>
@@ -149,6 +153,87 @@
     <Compile Include="DB\ModelCode\UserModel.cs" />
     <Compile Include="DB\ModelCode\UserModel.Designer.cs">
       <DependentUpon>UserModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\BranchesModel.cs" />
+    <Compile Include="DB\SPKCode\BranchesModel.Designer.cs">
+      <DependentUpon>BranchesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\BranchmanagersModel.cs" />
+    <Compile Include="DB\SPKCode\BranchmanagersModel.Designer.cs">
+      <DependentUpon>BranchmanagersModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\ConnectionHelper.cs" />
+    <Compile Include="DB\SPKCode\DivisisModel.cs" />
+    <Compile Include="DB\SPKCode\DivisisModel.Designer.cs">
+      <DependentUpon>DivisisModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\GeneralmanagersModel.cs" />
+    <Compile Include="DB\SPKCode\GeneralmanagersModel.Designer.cs">
+      <DependentUpon>GeneralmanagersModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\JabatansModel.cs" />
+    <Compile Include="DB\SPKCode\JabatansModel.Designer.cs">
+      <DependentUpon>JabatansModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\KaryawansModel.cs" />
+    <Compile Include="DB\SPKCode\KaryawansModel.Designer.cs">
+      <DependentUpon>KaryawansModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\LeasingsModel.cs" />
+    <Compile Include="DB\SPKCode\LeasingsModel.Designer.cs">
+      <DependentUpon>LeasingsModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\ModelKendaraansModel.cs" />
+    <Compile Include="DB\SPKCode\ModelKendaraansModel.Designer.cs">
+      <DependentUpon>ModelKendaraansModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\OwnersModel.cs" />
+    <Compile Include="DB\SPKCode\OwnersModel.Designer.cs">
+      <DependentUpon>OwnersModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\ProspekDetailsModel.cs" />
+    <Compile Include="DB\SPKCode\ProspekDetailsModel.Designer.cs">
+      <DependentUpon>ProspekDetailsModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\ProspeksModel.cs" />
+    <Compile Include="DB\SPKCode\ProspeksModel.Designer.cs">
+      <DependentUpon>ProspeksModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\SalesgradesModel.cs" />
+    <Compile Include="DB\SPKCode\SalesgradesModel.Designer.cs">
+      <DependentUpon>SalesgradesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\SalesheadgradesModel.cs" />
+    <Compile Include="DB\SPKCode\SalesheadgradesModel.Designer.cs">
+      <DependentUpon>SalesheadgradesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\SalesheadsModel.cs" />
+    <Compile Include="DB\SPKCode\SalesheadsModel.Designer.cs">
+      <DependentUpon>SalesheadsModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\SalesModel.cs" />
+    <Compile Include="DB\SPKCode\SalesModel.Designer.cs">
+      <DependentUpon>SalesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\TransmisiKendaraansModel.cs" />
+    <Compile Include="DB\SPKCode\TransmisiKendaraansModel.Designer.cs">
+      <DependentUpon>TransmisiKendaraansModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\UserRolesModel.cs" />
+    <Compile Include="DB\SPKCode\UserRolesModel.Designer.cs">
+      <DependentUpon>UserRolesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\UsersModel.cs" />
+    <Compile Include="DB\SPKCode\UsersModel.Designer.cs">
+      <DependentUpon>UsersModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\WarnaKendaraansModel.cs" />
+    <Compile Include="DB\SPKCode\WarnaKendaraansModel.Designer.cs">
+      <DependentUpon>WarnaKendaraansModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SPKCode\ZipcodesModel.cs" />
+    <Compile Include="DB\SPKCode\ZipcodesModel.Designer.cs">
+      <DependentUpon>ZipcodesModel.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneralModule\GeneralModule.cs">
       <SubType>Form</SubType>
@@ -230,6 +315,12 @@
     <Compile Include="Sales\Unit\UnitModel.Designer.cs">
       <DependentUpon>UnitModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\Unit\UnitModelLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Unit\UnitModelLookup.Designer.cs">
+      <DependentUpon>UnitModelLookup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\Service.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,12 +377,21 @@
     <EmbeddedResource Include="Sales\Unit\UnitModel.resx">
       <DependentUpon>UnitModel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\Unit\UnitModelLookup.resx">
+      <DependentUpon>UnitModelLookup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Service\Service.resx">
       <DependentUpon>Service.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DB\Model.xpo" />
+    <None Include="DB\Model.xpo">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="DB\Model.xpo.diagram">
       <DependentUpon>Model.xpo</DependentUpon>
+    </None>
+    <None Include="DB\SPK.xpo" />
+    <None Include="DB\SPK.xpo.diagram">
+      <DependentUpon>SPK.xpo</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

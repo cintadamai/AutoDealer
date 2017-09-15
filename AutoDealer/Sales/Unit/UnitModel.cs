@@ -183,6 +183,13 @@ namespace AutoDealer.Sales.Unit
 
             XPQuery<UnitModelModel> model_coll = ModelUnitOfWork.Query<UnitModelModel>();
             UnitModelModel model = model_coll.FirstOrDefault(m => m.id_model == Convert.ToInt64(id.Text));
+
+            if(model.UnitModelVariants.Count > 0)
+            {
+                MessageBox.Show("Model Tidak dapat dihapus karena memiliki data Variant dan transmisi", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             ModelUnitOfWork.Delete(model);
             ModelUnitOfWork.CommitChanges();
             LoadDataGrid();

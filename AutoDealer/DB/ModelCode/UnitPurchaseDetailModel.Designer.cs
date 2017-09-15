@@ -25,6 +25,7 @@ namespace AutoDealer.DB.DMS
             set { SetPropertyValue<long>("id", ref fid, value); }
         }
         UnitPurchaseModel fkode_pembelian;
+        [Indexed(Name = @"ikode_pembelian_unit_purchase_detail")]
         [Size(255)]
         [Association(@"UnitPurchaseDetailModelReferencesUnitPurchaseModel")]
         public UnitPurchaseModel kode_pembelian
@@ -125,6 +126,19 @@ namespace AutoDealer.DB.DMS
         {
             get { return fno_mesin; }
             set { SetPropertyValue<string>("no_mesin", ref fno_mesin, value); }
+        }
+        decimal fjumlah;
+        public decimal jumlah
+        {
+            get { return fjumlah; }
+            set { SetPropertyValue<decimal>("jumlah", ref fjumlah, value); }
+        }
+        UnitPurchaseModel fid_pembelian;
+        [Association(@"UnitPurchaseDetailModelReferencesUnitPurchaseModel1")]
+        public UnitPurchaseModel id_pembelian
+        {
+            get { return fid_pembelian; }
+            set { SetPropertyValue<UnitPurchaseModel>("id_pembelian", ref fid_pembelian, value); }
         }
     }
 

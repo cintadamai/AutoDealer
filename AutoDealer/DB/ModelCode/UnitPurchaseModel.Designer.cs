@@ -18,7 +18,6 @@ namespace AutoDealer.DB.DMS
     public partial class UnitPurchaseModel : XPLiteObject
     {
         string fkode_pembelian;
-        [Key]
         [Size(255)]
         public string kode_pembelian
         {
@@ -128,10 +127,21 @@ namespace AutoDealer.DB.DMS
             get { return fbranchid; }
             set { SetPropertyValue<BranchModel>("branchid", ref fbranchid, value); }
         }
+        long fid;
+        [Key(true)]
+        public long id
+        {
+            get { return fid; }
+            set { SetPropertyValue<long>("id", ref fid, value); }
+        }
         [Association(@"UnitPurchaseAccessoryModelReferencesUnitPurchaseModel")]
         public XPCollection<UnitPurchaseAccessoryModel> UnitPurchaseAccessories { get { return GetCollection<UnitPurchaseAccessoryModel>("UnitPurchaseAccessories"); } }
         [Association(@"UnitPurchaseDetailModelReferencesUnitPurchaseModel")]
         public XPCollection<UnitPurchaseDetailModel> UnitPurchaseDetails { get { return GetCollection<UnitPurchaseDetailModel>("UnitPurchaseDetails"); } }
+        [Association(@"UnitPurchaseAccessoryModelReferencesUnitPurchaseModel1")]
+        public XPCollection<UnitPurchaseAccessoryModel> UnitPurchaseAccessories1 { get { return GetCollection<UnitPurchaseAccessoryModel>("UnitPurchaseAccessories1"); } }
+        [Association(@"UnitPurchaseDetailModelReferencesUnitPurchaseModel1")]
+        public XPCollection<UnitPurchaseDetailModel> UnitPurchaseDetails1 { get { return GetCollection<UnitPurchaseDetailModel>("UnitPurchaseDetails1"); } }
     }
 
 }
