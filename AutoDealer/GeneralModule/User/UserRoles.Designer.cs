@@ -30,35 +30,37 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Input User");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("User Roles");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("User Branch");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("User", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3});
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("General Module", new System.Windows.Forms.TreeNode[] {
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Unit Model");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Unit Accessory");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Unit", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Supplier");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Retur Pembelian");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Pembelian");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Pembelian", new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode10,
-            treeNode11});
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Sales", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Manpower");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("SPKManagement");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Input User");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("User Roles");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("User Branch");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("User", new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode4,
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("General Module", new System.Windows.Forms.TreeNode[] {
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Unit Model");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Unit Accessory");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Unit", new System.Windows.Forms.TreeNode[] {
             treeNode8,
-            treeNode12});
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Sparepart");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Service");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Body Repair");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Finance");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Tax");
+            treeNode9});
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Supplier");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Retur Pembelian");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Pembelian");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Pembelian", new System.Windows.Forms.TreeNode[] {
+            treeNode11,
+            treeNode12,
+            treeNode13});
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Sales", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode14});
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Sparepart");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Service");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Body Repair");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Finance");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Tax");
             this.Hapus = new DevExpress.XtraEditors.SimpleButton();
             this.Edit = new DevExpress.XtraEditors.SimpleButton();
             this.Simpan = new DevExpress.XtraEditors.SimpleButton();
@@ -224,50 +226,56 @@
             this.PermissionTreeView.Enabled = false;
             this.PermissionTreeView.Location = new System.Drawing.Point(2, 2);
             this.PermissionTreeView.Name = "PermissionTreeView";
-            treeNode1.Name = "InputUser";
-            treeNode1.Text = "Input User";
-            treeNode2.Name = "UserRoles";
-            treeNode2.Text = "User Roles";
-            treeNode3.Name = "UserBranch";
-            treeNode3.Text = "User Branch";
-            treeNode4.Name = "ManageUser";
-            treeNode4.Text = "User";
-            treeNode5.Name = "GeneralModule";
-            treeNode5.Text = "General Module";
-            treeNode6.Name = "UnitModel";
-            treeNode6.Text = "Unit Model";
-            treeNode7.Name = "UnitAccessory";
-            treeNode7.Text = "Unit Accessory";
-            treeNode8.Name = "Unit";
-            treeNode8.Text = "Unit";
-            treeNode9.Name = "UnitSupplier";
-            treeNode9.Text = "Supplier";
-            treeNode10.Name = "ReturPembelian";
-            treeNode10.Text = "Retur Pembelian";
-            treeNode11.Name = "PembelianUnit";
-            treeNode11.Text = "Pembelian";
-            treeNode12.Name = "Pembelian";
-            treeNode12.Text = "Pembelian";
-            treeNode13.Name = "Sales";
-            treeNode13.Text = "Sales";
-            treeNode14.Name = "Sparepart";
-            treeNode14.Text = "Sparepart";
-            treeNode15.Name = "Service";
-            treeNode15.Text = "Service";
-            treeNode16.Name = "BodyRepair";
-            treeNode16.Text = "Body Repair";
-            treeNode17.Name = "Finance";
-            treeNode17.Text = "Finance";
-            treeNode18.Name = "Tax";
-            treeNode18.Text = "Tax";
+            treeNode1.Name = "Manpower";
+            treeNode1.Text = "Manpower";
+            treeNode2.Name = "SPKManagement";
+            treeNode2.Text = "SPKManagement";
+            treeNode3.Name = "InputUser";
+            treeNode3.Text = "Input User";
+            treeNode4.Name = "UserRoles";
+            treeNode4.Text = "User Roles";
+            treeNode5.Name = "UserBranch";
+            treeNode5.Text = "User Branch";
+            treeNode6.Name = "ManageUser";
+            treeNode6.Text = "User";
+            treeNode7.Name = "GeneralModule";
+            treeNode7.Text = "General Module";
+            treeNode8.Name = "UnitModel";
+            treeNode8.Text = "Unit Model";
+            treeNode9.Name = "UnitAccessory";
+            treeNode9.Text = "Unit Accessory";
+            treeNode10.Name = "Unit";
+            treeNode10.Text = "Unit";
+            treeNode11.Name = "UnitSupplier";
+            treeNode11.Text = "Supplier";
+            treeNode12.Name = "ReturPembelian";
+            treeNode12.Text = "Retur Pembelian";
+            treeNode13.Name = "PembelianUnit";
+            treeNode13.Text = "Pembelian";
+            treeNode14.Name = "Pembelian";
+            treeNode14.Text = "Pembelian";
+            treeNode15.Name = "Sales";
+            treeNode15.Text = "Sales";
+            treeNode16.Name = "Sparepart";
+            treeNode16.Text = "Sparepart";
+            treeNode17.Name = "Service";
+            treeNode17.Text = "Service";
+            treeNode18.Name = "BodyRepair";
+            treeNode18.Text = "Body Repair";
+            treeNode19.Name = "Finance";
+            treeNode19.Text = "Finance";
+            treeNode20.Name = "Tax";
+            treeNode20.Text = "Tax";
             this.PermissionTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode13,
-            treeNode14,
+            treeNode1,
+            treeNode2,
+            treeNode7,
             treeNode15,
             treeNode16,
             treeNode17,
-            treeNode18});
+            treeNode18,
+            treeNode19,
+            treeNode20});
             this.PermissionTreeView.Size = new System.Drawing.Size(416, 437);
             this.PermissionTreeView.TabIndex = 0;
             // 

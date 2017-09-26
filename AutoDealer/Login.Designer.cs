@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.SPKManagement = new DevExpress.XtraEditors.SimpleButton();
+            this.Manpower = new DevExpress.XtraEditors.SimpleButton();
             this.BodyRepair = new DevExpress.XtraEditors.SimpleButton();
             this.About = new DevExpress.XtraEditors.SimpleButton();
             this.Tax = new DevExpress.XtraEditors.SimpleButton();
@@ -50,16 +53,20 @@
             this.Keluar = new DevExpress.XtraEditors.SimpleButton();
             this.Masuk = new DevExpress.XtraEditors.SimpleButton();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.LoginUnitOfWork = new DevExpress.Xpo.UnitOfWork(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.username.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.password.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginUnitOfWork)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.SPKManagement);
+            this.groupControl1.Controls.Add(this.Manpower);
             this.groupControl1.Controls.Add(this.BodyRepair);
             this.groupControl1.Controls.Add(this.About);
             this.groupControl1.Controls.Add(this.Tax);
@@ -71,15 +78,36 @@
             this.groupControl1.Enabled = false;
             this.groupControl1.Location = new System.Drawing.Point(59, 320);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(555, 136);
+            this.groupControl1.Size = new System.Drawing.Size(555, 163);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Menu";
+            // 
+            // SPKManagement
+            // 
+            this.SPKManagement.Enabled = false;
+            this.SPKManagement.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("SPKManagement.ImageOptions.Image")));
+            this.SPKManagement.Location = new System.Drawing.Point(279, 24);
+            this.SPKManagement.Name = "SPKManagement";
+            this.SPKManagement.Size = new System.Drawing.Size(126, 36);
+            this.SPKManagement.TabIndex = 10;
+            this.SPKManagement.Text = "SPKManagement";
+            // 
+            // Manpower
+            // 
+            this.Manpower.Enabled = false;
+            this.Manpower.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Manpower.ImageOptions.Image")));
+            this.Manpower.Location = new System.Drawing.Point(147, 24);
+            this.Manpower.Name = "Manpower";
+            this.Manpower.Size = new System.Drawing.Size(126, 36);
+            this.Manpower.TabIndex = 9;
+            this.Manpower.Text = "Manpower (ITS)";
+            this.Manpower.Click += new System.EventHandler(this.Manpower_Click);
             // 
             // BodyRepair
             // 
             this.BodyRepair.Enabled = false;
             this.BodyRepair.ImageOptions.Image = global::AutoDealer.Properties.Resources.pagecolor_32x32;
-            this.BodyRepair.Location = new System.Drawing.Point(17, 77);
+            this.BodyRepair.Location = new System.Drawing.Point(17, 108);
             this.BodyRepair.Name = "BodyRepair";
             this.BodyRepair.Size = new System.Drawing.Size(126, 36);
             this.BodyRepair.TabIndex = 8;
@@ -88,7 +116,7 @@
             // About
             // 
             this.About.ImageOptions.Image = global::AutoDealer.Properties.Resources.tag_32x32;
-            this.About.Location = new System.Drawing.Point(413, 77);
+            this.About.Location = new System.Drawing.Point(413, 108);
             this.About.Name = "About";
             this.About.Size = new System.Drawing.Size(126, 36);
             this.About.TabIndex = 7;
@@ -98,7 +126,7 @@
             // 
             this.Tax.Enabled = false;
             this.Tax.ImageOptions.Image = global::AutoDealer.Properties.Resources.currency2_32x32;
-            this.Tax.Location = new System.Drawing.Point(280, 77);
+            this.Tax.Location = new System.Drawing.Point(280, 108);
             this.Tax.Name = "Tax";
             this.Tax.Size = new System.Drawing.Size(126, 36);
             this.Tax.TabIndex = 5;
@@ -108,7 +136,7 @@
             // 
             this.Finance.Enabled = false;
             this.Finance.ImageOptions.Image = global::AutoDealer.Properties.Resources.calculatesheet_32x32;
-            this.Finance.Location = new System.Drawing.Point(148, 77);
+            this.Finance.Location = new System.Drawing.Point(148, 108);
             this.Finance.Name = "Finance";
             this.Finance.Size = new System.Drawing.Size(126, 36);
             this.Finance.TabIndex = 4;
@@ -118,7 +146,7 @@
             // 
             this.Service.Enabled = false;
             this.Service.ImageOptions.Image = global::AutoDealer.Properties.Resources.showtestreport_32x32;
-            this.Service.Location = new System.Drawing.Point(413, 35);
+            this.Service.Location = new System.Drawing.Point(413, 66);
             this.Service.Name = "Service";
             this.Service.Size = new System.Drawing.Size(126, 36);
             this.Service.TabIndex = 3;
@@ -128,7 +156,7 @@
             // 
             this.Sparepart.Enabled = false;
             this.Sparepart.ImageOptions.Image = global::AutoDealer.Properties.Resources.ide_32x32;
-            this.Sparepart.Location = new System.Drawing.Point(281, 35);
+            this.Sparepart.Location = new System.Drawing.Point(281, 66);
             this.Sparepart.Name = "Sparepart";
             this.Sparepart.Size = new System.Drawing.Size(126, 36);
             this.Sparepart.TabIndex = 2;
@@ -138,7 +166,7 @@
             // 
             this.Sales.Enabled = false;
             this.Sales.ImageOptions.Image = global::AutoDealer.Properties.Resources.bosale_32x32;
-            this.Sales.Location = new System.Drawing.Point(149, 35);
+            this.Sales.Location = new System.Drawing.Point(149, 66);
             this.Sales.Name = "Sales";
             this.Sales.Size = new System.Drawing.Size(126, 36);
             this.Sales.TabIndex = 1;
@@ -149,7 +177,7 @@
             // 
             this.GeneralModule.Enabled = false;
             this.GeneralModule.ImageOptions.Image = global::AutoDealer.Properties.Resources.home_32x32;
-            this.GeneralModule.Location = new System.Drawing.Point(17, 35);
+            this.GeneralModule.Location = new System.Drawing.Point(17, 66);
             this.GeneralModule.Name = "GeneralModule";
             this.GeneralModule.Size = new System.Drawing.Size(126, 36);
             this.GeneralModule.TabIndex = 0;
@@ -164,9 +192,9 @@
             this.username.Properties.Appearance.Options.UseBackColor = true;
             this.username.Size = new System.Drawing.Size(137, 20);
             this.username.TabIndex = 3;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "Harus di isi.";
-            this.dxValidationProvider1.SetValidationRule(this.username, conditionValidationRule2);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Harus di isi.";
+            this.dxValidationProvider1.SetValidationRule(this.username, conditionValidationRule1);
             // 
             // labelControl1
             // 
@@ -193,9 +221,9 @@
             this.password.Properties.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(137, 20);
             this.password.TabIndex = 5;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "Harus di isi.";
-            this.dxValidationProvider1.SetValidationRule(this.password, conditionValidationRule3);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "Harus di isi.";
+            this.dxValidationProvider1.SetValidationRule(this.password, conditionValidationRule2);
             // 
             // labelControl3
             // 
@@ -244,11 +272,16 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             // 
+            // LoginUnitOfWork
+            // 
+            this.LoginUnitOfWork.IsObjectModifiedOnNonPersistentPropertyChange = null;
+            this.LoginUnitOfWork.TrackPropertiesModifications = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 491);
+            this.ClientSize = new System.Drawing.Size(644, 541);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
@@ -267,6 +300,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.password.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginUnitOfWork)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,5 +327,8 @@
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
         private DevExpress.XtraEditors.SimpleButton BodyRepair;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private DevExpress.XtraEditors.SimpleButton SPKManagement;
+        private DevExpress.XtraEditors.SimpleButton Manpower;
+        private DevExpress.Xpo.UnitOfWork LoginUnitOfWork;
     }
 }

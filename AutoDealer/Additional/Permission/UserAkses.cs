@@ -11,13 +11,17 @@ namespace AutoDealer.Additional.Permission
 {
     class UserAkses
     {
-        XPQuery<UserModel> user_coll = Session.DefaultSession.Query<UserModel>();
-        XPQuery<UserHasRolesModel> user_roles_coll = Session.DefaultSession.Query<UserHasRolesModel>();
-        XPQuery<RolesModel> roles_coll = Session.DefaultSession.Query<RolesModel>();
-        XPQuery<PermissionModel> permission_coll = Session.DefaultSession.Query<PermissionModel>();
-        XPQuery<RolesHasPermissionModel> role_permission_coll = Session.DefaultSession.Query<RolesHasPermissionModel>();
-        XPQuery<BranchModel> branch_coll = Session.DefaultSession.Query<BranchModel>();
-        XPQuery<UserHasBranchModel> user_has_branch_coll = Session.DefaultSession.Query<UserHasBranchModel>();
+        static UnitOfWork uow = new UnitOfWork
+        {
+                ConnectionString = AutoDealer.DB.DMS.ConnectionHelper.ConnectionString
+        };
+        XPQuery<UserModel> user_coll = uow.Query<UserModel>();
+        XPQuery<UserHasRolesModel> user_roles_coll = uow.Query<UserHasRolesModel>();
+        XPQuery<RolesModel> roles_coll = uow.Query<RolesModel>();
+        XPQuery<PermissionModel> permission_coll = uow.Query<PermissionModel>();
+        XPQuery<RolesHasPermissionModel> role_permission_coll = uow.Query<RolesHasPermissionModel>();
+        XPQuery<BranchModel> branch_coll = uow.Query<BranchModel>();
+        XPQuery<UserHasBranchModel> user_has_branch_coll = uow.Query<UserHasBranchModel>();
 
         UserModel User;
         public bool Can(String permission)
@@ -137,6 +141,9 @@ namespace AutoDealer.Additional.Permission
         }
 
 
-        public UserAkses() => User = Login.User;
+        public UserAkses()
+        {
+            User = user_coll.FirstOrDefault(u => u.username == Login.User.username);
+        }
     }
 }

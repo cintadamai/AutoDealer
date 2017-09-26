@@ -11,7 +11,7 @@ namespace AutoDealer
 {
     public partial class Login : SplashScreen
     {
-        XPQuery<UserModel> user_coll = Session.DefaultSession.Query<UserModel>();
+        XPQuery<UserModel> user_coll;
 
         UserAkses userAkses;
         public static UserModel User;
@@ -19,6 +19,8 @@ namespace AutoDealer
         {
             InitializeComponent();
             password.KeyDown += Password_KeyDown;
+            LoginUnitOfWork.ConnectionString = DB.DMS.ConnectionHelper.ConnectionString;
+            user_coll = LoginUnitOfWork.Query<UserModel>();
         }
 
         private void Password_KeyDown(object sender, KeyEventArgs e)
@@ -117,6 +119,16 @@ namespace AutoDealer
             {
                 Tax.Enabled = true;
             }
+
+            if(userAkses.Can("Manpower"))
+            {
+                Manpower.Enabled = true;
+            }
+
+            if(userAkses.Can("SPKManagement"))
+            {
+                SPKManagement.Enabled = true;
+            }
         }
 
         private void GeneralModule_Click(object sender, EventArgs e)
@@ -129,6 +141,13 @@ namespace AutoDealer
         private void Sales_Click(object sender, EventArgs e)
         {
             AutoDealer.Sales.Sales f = new AutoDealer.Sales.Sales();
+            f.Show();
+            f.Focus();
+        }
+
+        private void Manpower_Click(object sender, EventArgs e)
+        {
+            AutoDealer.Manpower.Manpower f = new AutoDealer.Manpower.Manpower();
             f.Show();
             f.Focus();
         }

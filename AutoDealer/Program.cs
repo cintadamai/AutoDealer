@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Xpo;
-using AutoDealer.DB.DMS;
 
 namespace AutoDealer
 {
@@ -16,8 +15,8 @@ namespace AutoDealer
         [STAThread]
         static void Main()
         {
-            ConnectionHelper.Connect(DevExpress.Xpo.DB.AutoCreateOption.DatabaseAndSchema);
-            XpoDefault.Session = new Session(XpoDefault.DataLayer);
+            DB.DMS.ConnectionHelper.Connect(DevExpress.Xpo.DB.AutoCreateOption.DatabaseAndSchema);
+            DB.its_honda.ConnectionHelper.Connect(DevExpress.Xpo.DB.AutoCreateOption.DatabaseAndSchema);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
