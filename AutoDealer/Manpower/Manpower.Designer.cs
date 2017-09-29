@@ -58,7 +58,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(813, 115);
+            this.ribbonControl1.Size = new System.Drawing.Size(813, 116);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // DataKaryawan
@@ -79,6 +79,7 @@
             this.DataSales.Name = "DataSales";
             this.DataSales.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.DataSales.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DataSales_ItemClick);
             // 
             // DataSaleshead
             // 
@@ -88,6 +89,7 @@
             this.DataSaleshead.Name = "DataSaleshead";
             this.DataSaleshead.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.DataSaleshead.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DataSaleshead_ItemClick);
             // 
             // DataCabang
             // 
@@ -97,6 +99,7 @@
             this.DataCabang.Name = "DataCabang";
             this.DataCabang.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.DataCabang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DataCabang_ItemClick);
             // 
             // DataBranchManager
             // 
@@ -106,6 +109,7 @@
             this.DataBranchManager.Name = "DataBranchManager";
             this.DataBranchManager.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.DataBranchManager.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DataBranchManager_ItemClick);
             // 
             // ribbonPage1
             // 

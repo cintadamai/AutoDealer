@@ -15,7 +15,7 @@ namespace AutoDealer.DB.its_honda
 {
     public static class ConnectionHelper
     {
-        public const string ConnectionString = @"XpoProvider=MySql;server=127.0.0.1;user id=root; password=110994; database=its_honda;persist security info=true;CharSet=utf8;";
+        public const string ConnectionString = @"XpoProvider=MySql;server=127.0.0.1;user id=root; password=110994; database=its_honda;persist security info=true;CharSet=utf8;Convert Zero Datetime=True;";
         public static void Connect(DevExpress.Xpo.DB.AutoCreateOption autoCreateOption)
         {
             XpoDefault.DataLayer = XpoDefault.GetDataLayer(ConnectionString, autoCreateOption);

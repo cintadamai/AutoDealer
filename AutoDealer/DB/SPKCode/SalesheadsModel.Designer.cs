@@ -78,6 +78,8 @@ namespace AutoDealer.DB.its_honda
         }
         [Association(@"ProspeksModelReferencesSalesheadsModel")]
         public XPCollection<ProspeksModel> ProspeksModelCollection { get { return GetCollection<ProspeksModel>("ProspeksModelCollection"); } }
+        [Association(@"SalesModelReferencesSalesheadsModel")]
+        public XPCollection<SalesModel> SalesModelCollection { get { return GetCollection<SalesModel>("SalesModelCollection"); } }
     }
 
 }

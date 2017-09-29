@@ -69,12 +69,13 @@ namespace AutoDealer.DB.its_honda
             get { return fsalesgradeId; }
             set { SetPropertyValue<long>("salesgradeId", ref fsalesgradeId, value); }
         }
-        long fsalesheadId;
+        SalesheadsModel fsalesheadId;
         [Indexed(Name = @"salesheadId")]
-        public long salesheadId
+        [Association(@"SalesModelReferencesSalesheadsModel")]
+        public SalesheadsModel salesheadId
         {
             get { return fsalesheadId; }
-            set { SetPropertyValue<long>("salesheadId", ref fsalesheadId, value); }
+            set { SetPropertyValue<SalesheadsModel>("salesheadId", ref fsalesheadId, value); }
         }
         [Association(@"ProspeksModelReferencesSalesModel")]
         public XPCollection<ProspeksModel> ProspeksModelCollection { get { return GetCollection<ProspeksModel>("ProspeksModelCollection"); } }
